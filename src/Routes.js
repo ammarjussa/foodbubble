@@ -7,17 +7,18 @@ import NotFound from './components/Layout/NotFound';
 import Footer from './components/Layout/Footer';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import UserProfile from './components/UserProfile/UserProfile';
 
 function AppRoutes() {
   return (
     <Router>
       <AppHeader />
       <Switch>
-        {/* <Route path="/" exact component={Shipments} /> */}
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
+        <Route path="/profile" exact component={UserProfile} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
