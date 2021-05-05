@@ -47,3 +47,48 @@
     }
   }
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.profile-header {
+  p {
+    font-size: 30px;
+    color: $font-color;
+    font-weight: 500;
+  }
+
+  .profile-search {
+    input {
+      border: 2px solid $border-color;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px;
+      width: 180px;
+      @include placeholder {
+        color: $border-color;
+        font-size: 14px;
+        padding-left: 10px;
+      }
+    }
+
+    .search-icon {
+      color: grey;
+      height: 40px;
+      width: 40px;
+      margin-left: 5px;
+    }
+  }
+}

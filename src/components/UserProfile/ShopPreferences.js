@@ -1,12 +1,12 @@
 import React from 'react';
 import UserProfileHeader from '../common/UserProfileHeader';
 
-const CookingExperience = () => {
+const ShopPreferences = () => {
   return (
-    <div>
+    <div className="profile-component">
       <UserProfileHeader />
     </div>
   );
 };
 
-export default CookingExperience;
+export default ShopPreferences;

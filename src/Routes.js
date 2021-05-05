@@ -7,7 +7,7 @@ import NotFound from './components/Layout/NotFound';
 import Footer from './components/Layout/Footer';
 import About from './components/About/About';
 import Home from './components/Home/Home';
-import UserProfile from './components/UserProfile/UserProfile';
+import ShopPreferences from './components/UserProfile/ShopPreferences';
 
 function AppRoutes() {
   return (
@@ -18,7 +18,7 @@ function AppRoutes() {
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
-        <Route path="/profile" exact component={UserProfile} />
+        <Route path="/profile" exact component={ShopPreferences} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
