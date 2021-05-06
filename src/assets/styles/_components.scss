@@ -103,7 +103,7 @@
 
   .options-table {
     height: auto;
-    width: 40vw;
+    width: 30vw;
     background-color: #dfe6ed;
     display: flex;
     flex-direction: column;
@@ -118,6 +118,16 @@
       border: none;
       padding: 10px;
       border-radius: 5px;
+      margin-top: 4%;
     }
+  }
+}
+
+.user-profile-options {
+  padding-top: 3%;
+  .up-title {
+    font-size: 30px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
   }
 }
