@@ -64,6 +64,7 @@
 }
 
 .profile-header {
+  padding-top: 3%;
   p {
     font-size: 30px;
     color: $font-color;
@@ -106,8 +107,6 @@
     background-color: #dfe6ed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-top: 4%;
     padding-bottom: 2%;
     margin-top: 2%;
