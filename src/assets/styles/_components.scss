@@ -155,6 +155,7 @@
 
       p {
         color: $font-color;
+        font-weight: $font-weight-heavy;
         font-size: 36px;
         margin-top: 10px;
       }
@@ -185,5 +186,18 @@
         font-size: 16px;
       }
     }
+  }
+}
+
+.feedback {
+  .feedback-title {
+    font-size: 24px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .feedback-text {
+    color: $font-color;
+    text-align: center;
   }
 }

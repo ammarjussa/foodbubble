@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Preferences from './components/UserProfile/Preferences';
 import Notifications from './components/UserProfile/Notifications';
 import UserProfileOptions from './components/UserProfile/UserProfileOptions';
+import Feedback from './components/UserProfile/Feedback';
 
 function AppRoutes() {
   return (
@@ -20,7 +21,7 @@ function AppRoutes() {
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
-        <Route path="/profile" exact component={UserProfileOptions} />
+        <Route path="/profile" exact component={Feedback} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
