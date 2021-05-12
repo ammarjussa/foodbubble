@@ -200,4 +200,48 @@
     color: $font-color;
     text-align: center;
   }
+
+  .feedback-form {
+    width: 60vw;
+    height: 95vh;
+    background-color: #dfe6ed;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    padding-top: 3%;
+    padding-left: 5%;
+
+    p {
+      color: $font-color;
+      font-size: 15px;
+    }
+
+    .feedback-emailbutton {
+      margin-left: 15%;
+      width: 20vw;
+      color: $font-color;
+      font-size: 15px;
+      border: 2px solid $border-color;
+      background-color: white;
+    }
+
+    .feedback-textarea {
+      width: 50vw;
+      height: 30vw;
+      border: 2px solid $border-color;
+      outline: none;
+      color: $font-color;
+      font-size: 15px;
+    }
+
+    .feedback-save-button {
+      color: white;
+      background-color: $button-color;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10%;
+      align-self: flex-end;
+      margin-right: 9%;
+    }
+  }
 }
