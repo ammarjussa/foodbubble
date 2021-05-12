@@ -1,8 +1,11 @@
 import React from 'react';
 import imgMealPlanner from '../../assets/images/img-meal-planner.png';
 import { Avatar } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 
 const UserProfileOptions = () => {
+  let history = useHistory();
+
   return (
     <div className="d-flex flex-column justify-content-center user-profile-options">
       <div className="d-flex justify-content-around align-items-end">
@@ -22,19 +25,19 @@ const UserProfileOptions = () => {
           <div className="d-flex justify-content-between ob-row">
             <p>Account</p>
             <input placeholder="User Email Address" type="text" />
-            <img src="arrow.svg" alt="arrow" />
+            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/')} />
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Preferences</p>
-            <img src="arrow.svg" alt="arrow" />
+            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/')}/>
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Notifications</p>
-            <img src="arrow.svg" alt="arrow" />
+            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/notifications')}/>
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Feedback</p>
-            <img src="arrow.svg" alt="arrow" />
+            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/feedback')}/>
           </div>
         </div>
       </div>

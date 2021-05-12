@@ -21,7 +21,9 @@ function AppRoutes() {
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
-        <Route path="/profile" exact component={Feedback} />
+        <Route path="/notifications" exact component={Notifications} />
+        <Route path="/feedback" exact component={Feedback} />
+        <Route path="/options" exact component={UserProfileOptions} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
