@@ -7,17 +7,23 @@ import NotFound from './components/Layout/NotFound';
 import Footer from './components/Layout/Footer';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import Preferences from './components/UserProfile/Preferences';
+import Notifications from './components/UserProfile/Notifications';
+import UserProfileOptions from './components/UserProfile/UserProfileOptions';
+import Feedback from './components/UserProfile/Feedback';
 
 function AppRoutes() {
   return (
     <Router>
       <AppHeader />
       <Switch>
-        {/* <Route path="/" exact component={Shipments} /> */}
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
+        <Route path="/notifications" exact component={Notifications} />
+        <Route path="/feedback" exact component={Feedback} />
+        <Route path="/options" exact component={UserProfileOptions} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

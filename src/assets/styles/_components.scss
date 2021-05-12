@@ -47,3 +47,201 @@
     }
   }
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.profile-header {
+  padding-top: 3%;
+  p {
+    font-size: 30px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .profile-search {
+    input {
+      border: 2px solid $border-color;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px;
+      width: 180px;
+      @include placeholder {
+        color: $border-color;
+        font-size: 14px;
+        padding-left: 10px;
+      }
+    }
+
+    .search-icon {
+      color: grey;
+      height: 40px;
+      width: 40px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.profile-options {
+  .options-title {
+    font-size: 24px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .options-table {
+    height: auto;
+    width: 30vw;
+    background-color: #dfe6ed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 20%;
+
+    .options-save-button {
+      color: white;
+      background-color: $button-color;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 4%;
+    }
+  }
+}
+
+.user-profile-options {
+  padding-top: 3%;
+  .up-title {
+    font-size: 36px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .options-board {
+    margin-top: 40px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 70vw;
+    background-color: ghostwhite;
+    border: 2px solid lavender;
+    margin-bottom: 20%;
+
+    .ob-avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+
+      .avatar {
+        height: 100px;
+        width: 100px;
+      }
+
+      p {
+        color: $font-color;
+        font-weight: $font-weight-heavy;
+        font-size: 36px;
+        margin-top: 10px;
+      }
+    }
+
+    .ob-form {
+      .ob-row {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 5%;
+
+        img {
+          height: 30px;
+          width: 30px;
+          cursor: pointer;
+        }
+
+        input {
+          width: 30vw;
+          height: 30px;
+          border: 2px solid lavender;
+          outline: none;
+        }
+      }
+
+      p {
+        color: $font-color;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.feedback {
+  .feedback-title {
+    font-size: 24px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .feedback-text {
+    color: $font-color;
+    text-align: center;
+  }
+
+  .feedback-form {
+    width: 60vw;
+    height: 100vh;
+    background-color: #dfe6ed;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    padding-top: 3%;
+    padding-left: 5%;
+
+    p {
+      color: $font-color;
+      font-size: 15px;
+    }
+
+    .feedback-emailbutton {
+      margin-left: 15%;
+      width: 20vw;
+      color: $font-color;
+      font-size: 15px;
+      border: 2px solid $border-color;
+      background-color: white;
+    }
+
+    .feedback-textarea {
+      width: 50vw;
+      height: 30vw;
+      border: 2px solid $border-color;
+      outline: none;
+      color: $font-color;
+      font-size: 15px;
+    }
+
+    .feedback-save-button {
+      color: white;
+      background-color: $button-color;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 8%;
+      align-self: flex-end;
+      margin-right: 9%;
+    }
+  }
+}
