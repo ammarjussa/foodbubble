@@ -1,3 +1,18 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
 .login-component {
   margin: 100px auto 50px auto;
   width: 500px;
@@ -18,7 +33,63 @@
 
 .home-component {
   text-align: center;
-  margin: 50px 0 400px 0;
+  margin: 50px 0 50px 0;
+
+  .home-title {
+    font-size: 36px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+    margin-top: 3%;
+  }
+
+  .home-image {
+    height: 60vh;
+  }
+
+  input {
+    border: 3px solid $border-color;
+    outline: none;
+    border-radius: 5px;
+    width: 180px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 2px;
+    @include placeholder {
+      color: $border-color;
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  }
+
+  button {
+    color: white;
+    background-color: $button-color;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    align-self: flex-end;
+    font-size: 12px;
+  }
+
+  .home-icon {
+    color: $font-color;
+    transform: scale(2);
+  }
+
+  .home-text {
+    margin: 7%;
+  }
+
+  .home-image-small {
+    height: 30vh;
+  }
+
+  .home-recipe-button {
+    color: $button-color;
+    background-color: white;
+    border: 2px solid $button-color;
+    font-weight: $font-weight-heavy;
+  }
 }
 
 .about-component {
@@ -45,21 +116,6 @@
         }
       }
     }
-  }
-}
-
-@mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
   }
 }
 
