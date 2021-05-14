@@ -301,3 +301,51 @@
     }
   }
 }
+
+.search-link {
+  color: $font-color;
+  font-weight: $font-weight-heavy;
+}
+
+.search-name {
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  font-weight: $font-weight-heavy;
+  padding: 10%;
+  margin-bottom: 10%;
+}
+
+.search-featured {
+  p {
+    text-align: center;
+    font-size: 36px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .featured-image {
+    height: 30vh;
+    margin-top: 3%;
+  }
+}
+
+.search-category {
+  img {
+    height: 10vh;
+  }
+}
+
+.search-meal {
+  img {
+    height: 20vh;
+  }
+
+  p {
+    text-align: center;
+    font-size: 36px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+    margin-bottom: 3%;
+  }
+}

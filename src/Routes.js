@@ -11,6 +11,8 @@ import Preferences from './components/UserProfile/Preferences';
 import Notifications from './components/UserProfile/Notifications';
 import UserProfileOptions from './components/UserProfile/UserProfileOptions';
 import Feedback from './components/UserProfile/Feedback';
+import ByCategory from './components/Search/ByCategory';
+import ByMeal from './components/Search/ByMeal';
 
 function AppRoutes() {
   return (
@@ -24,6 +26,7 @@ function AppRoutes() {
         <Route path="/notifications" exact component={Notifications} />
         <Route path="/feedback" exact component={Feedback} />
         <Route path="/options" exact component={UserProfileOptions} />
+        <Route path="/search" exact component={ByMeal} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
