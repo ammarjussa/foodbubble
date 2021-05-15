@@ -349,3 +349,32 @@
     margin-bottom: 3%;
   }
 }
+
+.user-profile {
+  .up-preference {
+    height: auto;
+    background-color: #dfe6ed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 20%;
+    margin-left: 3%;
+    border: 2px solid $border-color;
+
+    p {
+      font-size: 18px;
+      color: $font-color;
+      font-weight: $font-weight-heavy;
+    }
+
+    .up-add {
+      color: white;
+      background-color: $button-color;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+}
