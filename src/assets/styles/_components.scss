@@ -356,18 +356,12 @@
     background-color: #dfe6ed;
     display: flex;
     flex-direction: column;
-    padding-top: 4%;
-    padding-bottom: 2%;
+    padding: 3%;
+
     margin-top: 2%;
     margin-bottom: 20%;
     margin-left: 3%;
     border: 2px solid $border-color;
-
-    p {
-      font-size: 18px;
-      color: $font-color;
-      font-weight: $font-weight-heavy;
-    }
 
     .up-add {
       color: white;
@@ -376,5 +370,39 @@
       padding: 10px;
       border-radius: 5px;
     }
+  }
+  p {
+    font-size: 18px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+  label {
+    font-size: 14px;
+    padding-left: 3%;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .up-input {
+    border: 2px solid $border-color;
+    outline: none;
+    border-radius: 5px;
+    width: 180px;
+    margin-bottom: 3%;
+    @include placeholder {
+      color: $border-color;
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  }
+
+  .up-button {
+    color: white;
+    background-color: $button-color;
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
