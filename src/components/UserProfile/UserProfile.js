@@ -1,8 +1,6 @@
 import React from 'react';
 import UserProfileHead from './UserProfileHead';
 
-//Need separate components for repititive stuff
-
 const Preferences = ({ name }) => {
   return (
     <div className="d-flex flex-column align-items-center mb-3">
