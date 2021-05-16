@@ -406,3 +406,22 @@
     padding-right: 4%;
   }
 }
+
+.meal-planner-instructions {
+  .title {
+    font-size: 20px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .text {
+    font-size: 14px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .mp-image {
+    height: 20vh;
+    margin-top: 2%;
+  }
+}
