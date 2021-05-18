@@ -13,6 +13,12 @@
   }
 }
 
+.global-text1 {
+  font-size: 24px;
+  color: $font-color;
+  font-weight: $font-weight-heavy;
+}
+
 .login-component {
   margin: 100px auto 50px auto;
   width: 500px;
@@ -414,17 +420,6 @@
     font-weight: $font-weight-heavy;
   }
 
-  .text {
-    font-size: 14px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
-  .mp-image {
-    height: 20vh;
-    margin-top: 2%;
-  }
-
   .mp-recipe-title {
     padding-top: 10%;
     font-size: 12px;
@@ -440,12 +435,18 @@
     color: grey;
   }
 
+  .mp-image {
+    height: 20vh;
+    margin-top: 2%;
+  }
+}
+
+.find {
   .mp-big {
     font-size: 30px;
     color: $font-color;
     font-weight: $font-weight-heavy;
   }
-
   button {
     color: white;
     background-color: $button-color;
@@ -454,5 +455,80 @@
     padding: 2%;
     padding-left: 4%;
     padding-right: 4%;
+  }
+  .text {
+    font-size: 14px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .mp-image {
+    height: 20vh;
+    margin-top: 2%;
+  }
+}
+
+.box {
+  .box-img {
+    height: 10vh;
+  }
+
+  .title {
+    font-size: 18px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .number {
+    font-size: 14px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+}
+
+.plus {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 40%;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      color: black;
+      padding: 4px 16px;
+      text-decoration: none;
+      display: block;
+      border: 2px solid $border-color;
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  .dropdown:hover > .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover > .dropbtn {
+    background-color: #3e8e41;
   }
 }

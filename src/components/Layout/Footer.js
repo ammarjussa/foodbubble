@@ -40,7 +40,7 @@ const AppFooter = () => {
             <div className="col-sm-4">
               <ul>
                 <li>
-                  <Link to="/">Recipes</Link>
+                  <Link to="/recipes">Recipes</Link>
                 </li>
                 <li>
                   <Link to="/">Search Recipes</Link>
