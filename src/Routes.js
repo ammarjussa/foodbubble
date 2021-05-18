@@ -16,6 +16,7 @@ import ByMeal from './components/Search/ByMeal';
 import UserProfile from './components/UserProfile/UserProfile';
 import RecipeInformation from './components/MealPlanner/RecipeInformation';
 import MyCustomRecipes from './components/CustomRecipe/MyCustomRecipes';
+import AddCustomRecipe from './components/CustomRecipe/AddCustomRecipe';
 
 function AppRoutes() {
   return (
@@ -33,6 +34,7 @@ function AppRoutes() {
         <Route path="/profile" exact component={UserProfile} />
         <Route path="/planner" exact component={RecipeInformation} />
         <Route path="/recipes" exact component={MyCustomRecipes} />
+        <Route path="/addrecipe" exact component={AddCustomRecipe} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

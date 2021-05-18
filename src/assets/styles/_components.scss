@@ -532,3 +532,71 @@
     background-color: #3e8e41;
   }
 }
+.custom-recipe {
+  .cr-input {
+    border: 2px solid $border-color;
+    outline: none;
+    border-radius: 5px;
+    width: 25vw;
+    margin-bottom: 3%;
+    @include placeholder {
+      color: $border-color;
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    color: $font-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  .cr-textarea {
+    width: 25vw;
+    height: 10vw;
+    border: 2px solid $border-color;
+    outline: none;
+    color: $font-color;
+    font-size: 15px;
+  }
+
+  button {
+    align-self: flex-start;
+    color: white;
+    background-color: $button-color;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .cr-textarea2 {
+    width: 50vw;
+    height: 10vw;
+    border: 2px solid $border-color;
+    outline: none;
+    color: $font-color;
+    font-size: 15px;
+  }
+
+  select {
+    width: 30vw;
+    background: transparent;
+  }
+
+  .widthless {
+    width: 15vw;
+  }
+
+  .widthless2 {
+    width: 23vw;
+  }
+
+  .instructions {
+    color: #73cdc4;
+    font-size: 18px;
+    font-weight: $font-weight-heavy;
+    margin-top: 5%;
+    text-align: center;
+  }
+}

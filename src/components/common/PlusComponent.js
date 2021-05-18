@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PlusComponent = () => {
   return (
@@ -6,11 +7,11 @@ const PlusComponent = () => {
       <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
         <div class="dropdown-content">
-          <a href="#">Add Custom Recipes</a>
-          <a href="#">Save Recipe link</a>
-          <a href="#">Create Recipe</a>
-          <a href="#">Add Collection</a>
-          <a href="#">How to save recipes</a>
+          <Link to="/addrecipe">Add Custom Recipes</Link>
+          <Link to="#">Save Recipe link</Link>
+          <Link to="#">Create Recipe</Link>
+          <Link to="#">Add Collection</Link>
+          <Link to="#">How to save recipes</Link>
         </div>
       </div>
     </div>
