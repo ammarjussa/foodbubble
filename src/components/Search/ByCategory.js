@@ -1,12 +1,12 @@
 import React from 'react';
-import SearchHeader from './SearchHeader';
+import SearchHeader from '../common/SearchHeader';
 import FoodComponent from './FoodComponent';
 import FeaturedRecipes from './FeaturedRecipes';
 
 const ByCategory = () => {
   return (
     <div>
-      <SearchHeader type="category" />
+      <SearchHeader title="Search By Category" placeholder="Search Category" search />
       <div className="search-category pt-5 mt-4">
         <div className="d-flex justify-content-around">
           <FoodComponent name="Carbs" />

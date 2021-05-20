@@ -14,6 +14,10 @@ import Feedback from './components/UserProfile/Feedback';
 import ByCategory from './components/Search/ByCategory';
 import ByMeal from './components/Search/ByMeal';
 import UserProfile from './components/UserProfile/UserProfile';
+import RecipeInformation from './components/MealPlanner/RecipeInformation';
+import MyCustomRecipes from './components/CustomRecipe/MyCustomRecipes';
+import AddCustomRecipe from './components/CustomRecipe/AddCustomRecipe';
+import AddCustomFood from './components/CustomFood/AddCustomFood';
 
 function AppRoutes() {
   return (
@@ -29,6 +33,10 @@ function AppRoutes() {
         <Route path="/options" exact component={UserProfileOptions} />
         <Route path="/search" exact component={ByCategory} />
         <Route path="/profile" exact component={UserProfile} />
+        <Route path="/planner" exact component={RecipeInformation} />
+        <Route path="/recipes" exact component={MyCustomRecipes} />
+        <Route path="/addrecipe" exact component={AddCustomRecipe} />
+        <Route path="/addfood" exact component={AddCustomFood} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

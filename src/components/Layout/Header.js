@@ -39,7 +39,7 @@ const AppHeader = () => {
 
           <div class="nav-links">
             <Link to="/">Home</Link> | <Link to="/about">About </Link> |{' '}
-            <Link to="/">Meal Planner</Link> | <Link to="/search">Search Recipes</Link> |{' '}
+            <Link to="/planner">Meal Planner</Link> | <Link to="/search">Search Recipes</Link> |{' '}
             <Link to="/">Plan My Week</Link> | <Link to="/login">Login</Link>
           </div>
 
