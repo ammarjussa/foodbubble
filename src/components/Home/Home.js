@@ -41,7 +41,7 @@ const Home = function () {
           </div>
           <div className="d-flex flex-column align-items-center justify-content-center">
             <SearchIcon className="home-icon" />
-            <p className="home-text">
+            <p  className="home-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
