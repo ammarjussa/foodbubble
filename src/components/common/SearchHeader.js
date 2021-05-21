@@ -8,10 +8,10 @@ const SearchHeader = ({ title, placeholder, search }) => {
     <div className="d-flex justify-content-around align-items-end profile-header">
       <div></div>
       <div>
-        <p>{title}</p>
+        <p className="main-title">{title}</p>
         {search ? (
           <div className="profile-search">
-            <input type="text" placeholder={placeholder} />
+            <input className="primary-input" type="text" placeholder={placeholder} />
             <SearchIcon className="search-icon" />
           </div>
         ) : null}

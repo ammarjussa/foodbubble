@@ -18,7 +18,7 @@ const ByMeal = () => {
           <FoodComponent name="Dessert" />
           <FoodComponent name="Workout" />
         </div>
-        <p>Special Occasions</p>
+        <p className="main-title mt-3">Special Occasions</p>
         <div className="d-flex justify-content-around">
           <FoodComponent name="Anniversary" />
           <FoodComponent name="Christmas" />

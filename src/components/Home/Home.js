@@ -12,10 +12,10 @@ const Home = function () {
         alt="food demo"
         src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
       />
-      <p className="home-title">Create Your Meal</p>
+      <p className="main-title mt-4">Create Your Meal</p>
       <div className="d-flex align-items-center justify-content-center ml-5">
-        <input placeholder="Add your ingredients" />
-        <button>Add Ingredient</button>
+        <input className="primary-input ml-3 mr-4" placeholder="Add your ingredients" />
+        <button className="primary-button">Add Ingredient</button>
       </div>
       <div className="d-flex align-items-center justify-content-around m-5 pl-5 pr-5  ">
         <p>Ingredients</p>
@@ -26,7 +26,7 @@ const Home = function () {
       <Separator />
 
       <div>
-        <p className="home-title">Features and Benefits</p>
+        <p className="main-title mt-4">Features and Benefits</p>
         <p className="pl-5 pr-5 ml-5 mr-5">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
           been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -41,7 +41,7 @@ const Home = function () {
           </div>
           <div className="d-flex flex-column align-items-center justify-content-center">
             <SearchIcon className="home-icon" />
-            <p  className="home-text">
+            <p className="home-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
@@ -57,7 +57,7 @@ const Home = function () {
       <Separator />
 
       <div>
-        <p className="home-title">Featured Recipes</p>
+        <p className="main-title mt-4">Featured Recipes</p>
         <div className="d-flex justify-content-around align-items-center mt-5">
           <div>
             <img

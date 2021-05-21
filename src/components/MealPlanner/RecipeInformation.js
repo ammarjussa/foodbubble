@@ -17,7 +17,7 @@ const RecipeInformation = () => {
     <>
       <SearchHeader title="Meal Planner" />
       <div className="px-5 mx-5 meal-planner-instructions">
-        <p className="title">How the Meal Planner Works</p>
+        <p className="secondary-title">How the Meal Planner Works</p>
         <p className="text">
           The meal planner uses an algorithm to calculate the precise number of calories each user
           should consume based on their age, height, weight, gender, health goals, and activity

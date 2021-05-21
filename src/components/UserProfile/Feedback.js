@@ -6,8 +6,8 @@ const Feedback = () => {
     <>
       <UserProfileHeader />
       <div className="d-flex flex-column align-items-center feedback">
-        <p className="feedback-title">Feedback</p>
-        <p className="feedback-text">
+        <p className="secondary-title">Feedback</p>
+        <p className="feedback-text text-center">
           We work hard to provide you with the best customer experience possible. <br />
           Please send any improvements you would like to see.
         </p>
@@ -19,7 +19,7 @@ const Feedback = () => {
           <div className="d-flex flex-column justify-content-center align-items-start">
             <p>Details</p>
             <textarea className="feedback-textarea"></textarea>
-            <button className="feedback-save-button">Submit</button>
+            <button className="secondary-button mr-5 mt-5">Submit</button>
           </div>
         </div>
       </div>

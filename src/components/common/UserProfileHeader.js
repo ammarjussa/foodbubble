@@ -8,12 +8,12 @@ const UserProfileHeader = () => {
     <div className="d-flex justify-content-around profile-header">
       <div className="d-flex flex-column align-items-center">
         <Avatar className="p-4" style={{ height: '120px', width: '120px' }} />
-        <p className="mt-4">User Name</p>
+        <p className="main-title mt-4">User Name</p>
       </div>
       <div>
-        <p>User Profile</p>
+        <p className="main-title">User Profile</p>
         <div className="profile-search">
-          <input type="text" placeholder="Search Recipes" />
+          <input className="primary-input" type="text" placeholder="Search Recipes" />
           <SearchIcon className="search-icon" />
         </div>
       </div>

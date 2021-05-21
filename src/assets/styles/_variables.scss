@@ -1,3 +1,18 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
 $font-color: #2c3844;
 $border-color: #a3adb9;
 $button-color: #2b88d9;
