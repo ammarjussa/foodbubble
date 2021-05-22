@@ -32,7 +32,7 @@ const UserProfileOptions = () => {
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Preferences</p>
-            <ContinueButton onClick={() => history.push('/')} />
+            <ContinueButton onClick={() => history.push('/preference')} />
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Notifications</p>

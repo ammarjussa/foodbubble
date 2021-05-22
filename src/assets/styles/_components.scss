@@ -9,6 +9,12 @@
   font-weight: $font-weight-heavy;
 }
 
+.normal-label {
+  font-size: $font-size-small;
+  color: $font-color;
+  font-weight: $font-weight-heavy;
+}
+
 .help-text {
   font-size: $font-size-vsmall;
   color: $border-color;
@@ -159,13 +165,10 @@
     margin-top: 2%;
     margin-bottom: 20%;
 
-    .options-save-button {
-      color: white;
-      background-color: $button-color;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 4%;
+    .options-layout {
+      margin-left: 35%;
+      margin-right: 35%;
+      margin-bottom: 20%;
     }
   }
 }
