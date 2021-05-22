@@ -6,7 +6,7 @@ const Preferences = () => {
     <>
       <UserProfileHeader />
       <div className="d-flex flex-column align-items-center profile-options">
-        <p className="options-title">Shop Perferences</p>
+        <p className="secondary-title">Shop Perferences</p>
         <div className="options-table">
           {/* Radio/Checkboxes */}
           <button className="options-save-button">Save To Profile</button>

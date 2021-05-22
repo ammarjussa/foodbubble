@@ -3,7 +3,7 @@ import React from 'react';
 const FeaturedRecipes = () => {
   return (
     <div className="d-flex flex-column search-featured mt-5 pt-5 mb-5 pb-5">
-      <p>Featured Recipes</p>
+      <p className="main-title text-center">Featured Recipes</p>
       <div className="d-flex justify-content-around align-items-center">
         <img
           className="featured-image"

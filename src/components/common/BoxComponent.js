@@ -8,8 +8,8 @@ const BoxComponent = ({ title = 'All', number = 10 }) => {
         alt="box"
         src="https://i5.walmartimages.com/asr/83e8eef0-1214-4c4d-ab9c-a4b4dbdb9164_1.85300cb2d9ca97099e733d2e7ff58c80.jpeg"
       />
-      <p className="title pt-3">{title}</p>
-      <p className="number">{number}</p>
+      <p className="secondary-title pt-3">{title}</p>
+      <p>{number}</p>
     </div>
   );
 };

@@ -1,24 +1,49 @@
-@mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-}
-
-.global-text1 {
-  font-size: 24px;
-  color: $font-color;
+//GLOBAL STYLES
+.main-title {
+  font-size: $font-size-vlarge;
   font-weight: $font-weight-heavy;
 }
 
+.secondary-title {
+  font-size: $font-size-large;
+  font-weight: $font-weight-heavy;
+}
+
+.primary-button {
+  color: white;
+  background-color: $button-color-2;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  align-self: flex-end;
+  font-size: $font-size-vsmall;
+}
+
+.secondary-button {
+  color: white;
+  background-color: $button-color-1;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  align-self: flex-end;
+  font-size: $font-size-vsmall;
+}
+
+.primary-input {
+  border: 2px solid $border-color;
+  outline: none;
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  padding: 2px;
+  @include placeholder {
+    color: $border-color;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
+
+//LOGIN
 .login-component {
   margin: 100px auto 50px auto;
   width: 500px;
@@ -28,6 +53,7 @@
   }
 }
 
+//REGISTER
 .register-component {
   margin: 100px auto 50px auto;
   width: 500px;
@@ -37,44 +63,13 @@
   }
 }
 
+//HOME
 .home-component {
   text-align: center;
   margin: 50px 0 50px 0;
 
-  .home-title {
-    font-size: 36px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-    margin-top: 3%;
-  }
-
   .home-image {
     height: 60vh;
-  }
-
-  input {
-    border: 3px solid $border-color;
-    outline: none;
-    border-radius: 5px;
-    width: 180px;
-    margin-left: 3%;
-    margin-right: 3%;
-    padding: 2px;
-    @include placeholder {
-      color: $border-color;
-      font-size: 14px;
-      padding-left: 10px;
-    }
-  }
-
-  button {
-    color: white;
-    background-color: $button-color;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    align-self: flex-end;
-    font-size: 12px;
   }
 
   .home-icon {
@@ -91,13 +86,14 @@
   }
 
   .home-recipe-button {
-    color: $button-color;
+    color: $button-color-2;
     background-color: white;
-    border: 2px solid $button-color;
+    border: 2px solid $button-color-2;
     font-weight: $font-weight-heavy;
   }
 }
 
+//ABOUT
 .about-component {
   section {
     padding: 40px 15%;
@@ -125,28 +121,11 @@
   }
 }
 
+//PROFILE_HEADER
 .profile-header {
   padding-top: 3%;
-  p {
-    font-size: 30px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
 
   .profile-search {
-    input {
-      border: 2px solid $border-color;
-      outline: none;
-      border-radius: 5px;
-      padding: 5px;
-      width: 180px;
-      @include placeholder {
-        color: $border-color;
-        font-size: 14px;
-        padding-left: 10px;
-      }
-    }
-
     .search-icon {
       color: grey;
       height: 40px;
@@ -156,6 +135,7 @@
   }
 }
 
+//PROFILE_OPTIONS
 .profile-options {
   .options-title {
     font-size: 24px;
@@ -185,13 +165,9 @@
   }
 }
 
+//USER_PROFILE_OPTIONS
 .user-profile-options {
   padding-top: 3%;
-  .up-title {
-    font-size: 36px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
 
   .options-board {
     margin-top: 40px;
@@ -214,13 +190,6 @@
         height: 100px;
         width: 100px;
       }
-
-      p {
-        color: $font-color;
-        font-weight: $font-weight-heavy;
-        font-size: 36px;
-        margin-top: 10px;
-      }
     }
 
     .ob-form {
@@ -242,27 +211,12 @@
           outline: none;
         }
       }
-
-      p {
-        color: $font-color;
-        font-size: 16px;
-      }
     }
   }
 }
 
+//FEEDBACK
 .feedback {
-  .feedback-title {
-    font-size: 24px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
-  .feedback-text {
-    color: $font-color;
-    text-align: center;
-  }
-
   .feedback-form {
     width: 60vw;
     height: 100vh;
@@ -272,16 +226,11 @@
     padding-top: 3%;
     padding-left: 5%;
 
-    p {
-      color: $font-color;
-      font-size: 15px;
-    }
-
     .feedback-emailbutton {
       margin-left: 15%;
       width: 20vw;
       color: $font-color;
-      font-size: 15px;
+      font-size: $font-size-small;
       border: 2px solid $border-color;
       background-color: white;
     }
@@ -294,20 +243,10 @@
       color: $font-color;
       font-size: 15px;
     }
-
-    .feedback-save-button {
-      color: white;
-      background-color: $button-color;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 8%;
-      align-self: flex-end;
-      margin-right: 9%;
-    }
   }
 }
 
+//SEARCH
 .search-link {
   color: $font-color;
   font-weight: $font-weight-heavy;
@@ -315,7 +254,7 @@
 
 .search-name {
   text-align: center;
-  font-size: 20px;
+  font-size: $font-size-large;
   color: red;
   font-weight: $font-weight-heavy;
   padding: 10%;
@@ -323,13 +262,6 @@
 }
 
 .search-featured {
-  p {
-    text-align: center;
-    font-size: 36px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
   .featured-image {
     height: 30vh;
     margin-top: 3%;
@@ -346,16 +278,9 @@
   img {
     height: 20vh;
   }
-
-  p {
-    text-align: center;
-    font-size: 36px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-    margin-bottom: 3%;
-  }
 }
 
+//PROFILE
 .user-profile {
   .up-preference {
     height: auto;
@@ -369,57 +294,14 @@
     margin-left: 3%;
     border: 2px solid $border-color;
 
-    .up-add {
-      color: white;
-      background-color: $button-color;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
+    .add {
+      width: 75px;
     }
-  }
-  p {
-    font-size: 18px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-  label {
-    font-size: 14px;
-    padding-left: 3%;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
-  .up-input {
-    border: 2px solid $border-color;
-    outline: none;
-    border-radius: 5px;
-    width: 180px;
-    margin-bottom: 3%;
-    @include placeholder {
-      color: $border-color;
-      font-size: 14px;
-      padding-left: 10px;
-    }
-  }
-
-  .up-button {
-    color: white;
-    background-color: $button-color;
-    border: none;
-    border-radius: 5px;
-    padding: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
   }
 }
 
+//PLANNER_INSTRUCTIONS
 .meal-planner-instructions {
-  .title {
-    font-size: 20px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
   .mp-recipe-title {
     padding-top: 10%;
     font-size: 12px;
@@ -441,27 +323,8 @@
   }
 }
 
+//CUSTOM_RECIPE
 .find {
-  .mp-big {
-    font-size: 30px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-  button {
-    color: white;
-    background-color: $button-color;
-    border: none;
-    border-radius: 5px;
-    padding: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-  .text {
-    font-size: 14px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
   .mp-image {
     height: 20vh;
     margin-top: 2%;
@@ -471,18 +334,6 @@
 .box {
   .box-img {
     height: 10vh;
-  }
-
-  .title {
-    font-size: 18px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
-  }
-
-  .number {
-    font-size: 14px;
-    color: $font-color;
-    font-weight: $font-weight-heavy;
   }
 }
 
@@ -532,23 +383,12 @@
     background-color: #3e8e41;
   }
 }
+
+//ADD_RECIPE
 .custom-recipe {
-  .cr-input {
-    border: 2px solid $border-color;
-    outline: none;
-    border-radius: 5px;
-    width: 25vw;
-    margin-bottom: 3%;
-    @include placeholder {
-      color: $border-color;
-      font-size: 14px;
-      padding-left: 10px;
-    }
-  }
 
   label {
     font-size: 14px;
-    color: $font-color;
     font-weight: $font-weight-heavy;
   }
 
@@ -561,14 +401,6 @@
     font-size: 15px;
   }
 
-  button {
-    align-self: flex-start;
-    color: white;
-    background-color: $button-color;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-  }
 
   .cr-textarea2 {
     width: 50vw;
@@ -582,14 +414,6 @@
   select {
     width: 30vw;
     background: transparent;
-  }
-
-  .widthless {
-    width: 15vw;
-  }
-
-  .widthless2 {
-    width: 23vw;
   }
 
   .instructions {

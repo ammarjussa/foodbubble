@@ -9,7 +9,7 @@ const MyCustomRecipes = () => {
     <div>
       <SearchHeader title="My Custom Recipes" />
       <div className="p-5 mr-5">
-        <p className="global-text1 px-5 mx-4">My Custom Recipe Boxes</p>
+        <p className="secondary-title px-5 mx-4">My Custom Recipe Boxes</p>
         <div className="d-flex justify-content-around">
           <BoxComponent title="All" number={10} />
           <BoxComponent title="Favorites" number={10} />

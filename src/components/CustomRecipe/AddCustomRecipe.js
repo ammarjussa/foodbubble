@@ -6,12 +6,17 @@ const AddCustomRecipe = () => {
     <div>
       <SearchHeader title="Add A Custom Recipe" />
       <div className="custom-recipe p-5 mx-5 d-flex flex-column">
-        <p className="global-text1">Add Your Own Original Recipe</p>
+        <p className="secondary-title">Add Your Own Original Recipe</p>
         <div className="d-flex justify-content-between">
           <div className="d-flex flex-column">
             <div className="d-flex flex-column align-items-start">
               <label for="title">Name</label>
-              <input className="cr-input" placeholder="Name of Recipe" type="text" />
+              <input
+                className="primary-input mb-4"
+                style={{ width: '25vw' }}
+                placeholder="Name of Recipe"
+                type="text"
+              />
             </div>
             <div className="d-flex flex-column align-items-start">
               <label for="description">Ingredients</label>
@@ -21,12 +26,25 @@ const AddCustomRecipe = () => {
           <div>
             <div className="d-flex flex-column align-items-start">
               <label for="description">Description</label>
-              <input className="cr-input" placeholder="Description of Recipe" type="text" />
+              <input
+                className="primary-input mb-4"
+                style={{ width: '25vw' }}
+                placeholder="Description of Recipe"
+                type="text"
+              />
             </div>
           </div>
         </div>
-        <button style={{ width: '20vw', marginTop: '4%' }}>Show preview of ingredients</button>
-        <button style={{ width: '23vw', marginTop: '4%' }}>
+        <button
+          className="primary-button align-self-start"
+          style={{ width: '20vw', marginTop: '4%' }}
+        >
+          Show preview of ingredients
+        </button>
+        <button
+          className="primary-button align-self-start"
+          style={{ width: '23vw', marginTop: '4%' }}
+        >
           Add Ingredients to the shopping list
         </button>
 
@@ -50,35 +68,72 @@ const AddCustomRecipe = () => {
         </div>
         <div className="pt-5 mt-5">
           <div className=" d-flex justify-content-between">
-            <input className="cr-input widthless" placeholder="Servings QTY" type="text" />
-            <input className="cr-input widthless" placeholder="Ready in (Mins)" type="text" />
             <input
-              className="cr-input widthless"
+              className="primary-input mb-4"
+              style={{ width: '15vw' }}
+              placeholder="Servings QTY"
+              type="text"
+            />
+            <input
+              className="primary-input mb-4"
+              style={{ width: '15vw' }}
+              placeholder="Ready in (Mins)"
+              type="text"
+            />
+            <input
+              className="primary-input mb-4"
+              style={{ width: '15vw' }}
               placeholder="Preparation Time (Mins)"
               type="text"
             />
-            <input className="cr-input widthless" placeholder="Cooking Time (Mins)" type="text" />
+            <input
+              className="primary-input mb-4"
+              style={{ width: '15vw' }}
+              placeholder="Cooking Time (Mins)"
+              type="text"
+            />
           </div>
 
           <div>
             <div className="d-flex align-items-start">
-              <input className="cr-input widthless" placeholder="Custom Tags" type="text" />
-              <button style={{ width: '4vw', padding: '5px', marginLeft: '10%' }}>Add</button>
+              <input
+                className="primary-input mb-4"
+                style={{ width: '15vw' }}
+                placeholder="Custom Tags"
+                type="text"
+              />
+              <button
+                className="primary-button align-self-start"
+                style={{ width: '4vw', padding: '5px', marginLeft: '10%' }}
+              >
+                Add
+              </button>
             </div>
           </div>
 
           <div className="d-flex justify-content-between">
             <div className="d-flex align-items-start">
               <input
-                className="cr-input widthless2"
+                className="primary-input mb-4"
+                style={{ width: '23vw' }}
                 placeholder="Upload Images (Max 3MB jpg)"
                 type="text"
                 disabled
               />
-              <button style={{ width: '8vw', padding: '5px', marginLeft: '9%' }}>Upload</button>
+              <button
+                className="primary-button align-self-start"
+                style={{ width: '8vw', padding: '5px', marginLeft: '9%' }}
+              >
+                Upload
+              </button>
             </div>
             <div className="d-flex flex-column align-items-center px-5">
-              <button style={{ width: '10vw', padding: '5px', alignSelf: 'center' }}>Save To Recipes</button>
+              <button
+                className="primary-button"
+                style={{ width: '10vw', padding: '5px', alignSelf: 'center' }}
+              >
+                Save To Recipes
+              </button>
               <p className="instructions">Adds recipe to My custom recipes</p>
             </div>
           </div>
