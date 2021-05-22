@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import HelpIcon from '@material-ui/icons/Help';
 
 const Login = () => {
   return (
