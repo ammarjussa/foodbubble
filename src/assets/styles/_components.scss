@@ -428,7 +428,7 @@
   font-size: 14px;
 }
 
-//Counter Component
+//COUNTER_COMPONENT
 
 .counter {
   input {
@@ -447,5 +447,18 @@
     cursor: pointer;
     width: 15px;
     height: 15px;
+  }
+}
+
+//CONTINUE_BUTTON
+.continue-container {
+  border: 3px solid $font-color;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .continue-icon {
+    color: $font-color;
   }
 }
