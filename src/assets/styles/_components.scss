@@ -170,6 +170,13 @@
       margin-right: 35%;
       margin-bottom: 20%;
     }
+
+    .remove {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
