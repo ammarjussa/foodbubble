@@ -14,7 +14,7 @@ const Home = function () {
       />
       <p className="main-title mt-4">Create Your Meal</p>
       <div className="d-flex align-items-center justify-content-center ml-5">
-        <input className="primary-input ml-3 mr-4" placeholder="Add your ingredients" />
+        <input disabled className="primary-input ml-3 mr-4" placeholder="Add your ingredients" />
         <button className="primary-button">Add Ingredient</button>
       </div>
       <div className="d-flex align-items-center justify-content-around m-5 pl-5 pr-5  ">

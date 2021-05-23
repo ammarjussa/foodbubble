@@ -3,6 +3,7 @@ import imgMealPlanner from '../../assets/images/img-meal-planner.png';
 import { Avatar } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import SearchHeader from '../common/SearchHeader';
+import ContinueButton from '../common/ContinueButton';
 
 const UserProfileOptions = () => {
   let history = useHistory();
@@ -27,19 +28,19 @@ const UserProfileOptions = () => {
           <div className="d-flex justify-content-between ob-row">
             <p>Account</p>
             <input placeholder="User Email Address" type="text" />
-            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/')} />
+            <ContinueButton onClick={() => history.push('/')} />
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Preferences</p>
-            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/')} />
+            <ContinueButton onClick={() => history.push('/preference')} />
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Notifications</p>
-            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/notifications')} />
+            <ContinueButton onClick={() => history.push('/notifications')} />
           </div>
           <div className="d-flex justify-content-between ob-row">
             <p>Feedback</p>
-            <img src="arrow.svg" alt="arrow" onClick={() => history.push('/feedback')} />
+            <ContinueButton onClick={() => history.push('/feedback')} />
           </div>
         </div>
       </div>
