@@ -4,7 +4,19 @@ import SearchHeader from '../common/SearchHeader';
 const MicroNutrition = () => (
   <div className="d-flex justify-content-between">
     <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
+      <label>Protein (g)</label>
+    </div>
+    <div className="d-flex flex-column align-items-center">
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
+      <label>Protein (g)</label>
+    </div>
+    <div className="d-flex flex-column align-items-center">
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
+      <label>Protein (g)</label>
+    </div>
+    <div className="d-flex flex-column align-items-center">
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
       <label>Protein (g)</label>
     </div>
     <div className="d-flex flex-column align-items-center">
@@ -12,23 +24,11 @@ const MicroNutrition = () => (
       <label>Protein (g)</label>
     </div>
     <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
       <label>Protein (g)</label>
     </div>
     <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
-      <label>Protein (g)</label>
-    </div>
-    <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
-      <label>Protein (g)</label>
-    </div>
-    <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
-      <label>Protein (g)</label>
-    </div>
-    <div className="d-flex flex-column align-items-center">
-      <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+      <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
       <label>Protein (g)</label>
     </div>
   </div>
@@ -44,14 +44,14 @@ const AddCustomFood = () => {
             <div>
               <p className="global-text1">Name of Food</p>
               <input
-                className="cr-input"
+                className="primary-input"
                 style={{ width: '15vw' }}
                 placeholder="Name of the Food"
               />
             </div>
             <div>
               <p className="global-text1">Price Per Serving</p>
-              <input className="cr-input" style={{ width: '10vw' }} placeholder="$" />
+              <input className="primary-input" style={{ width: '10vw' }} placeholder="$" />
             </div>
             <div className="pb-5 mb-5">
               <p className="global-text1">Choose Custom Food Box</p>
@@ -66,19 +66,19 @@ const AddCustomFood = () => {
               <p className="global-text1">Macro Nutrition Per Serving</p>
               <div className="d-flex justify-content-between">
                 <div className="d-flex flex-column align-items-center">
-                  <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+                  <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
                   <label>Calories</label>
                 </div>
                 <div className="d-flex flex-column align-items-center">
-                  <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+                  <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
                   <label>Protein (g)</label>
                 </div>
                 <div className="d-flex flex-column align-items-center">
-                  <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+                  <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
                   <label>Fat (g)</label>
                 </div>
                 <div className="d-flex flex-column align-items-center">
-                  <input style={{ width: '5vw' }} className="cr-input" placeholder="0" />
+                  <input style={{ width: '5vw' }} className="primary-input" placeholder="0" />
                   <label>Carbs (g)</label>
                 </div>
               </div>
@@ -190,13 +190,18 @@ const AddCustomFood = () => {
               <p className="global-text1">Upload Image</p>
               <div className="d-flex">
                 <div className="d-flex flex-column">
-                  <input style={{ width: '10vw' }} className="cr-input" placeholder="Choose File" />
+                  <input
+                    disabled
+                    style={{ width: '10vw' }}
+                    className="cr-input"
+                    placeholder="Choose File"
+                  />
                   <label className="text-center">(Max 3MB-JPEG)</label>
                 </div>
-                <button className="p-1 ml-5">Upload Image</button>
+                <button className="p-1 ml-5 mb-5 primary-button">Upload Image</button>
               </div>
             </div>
-            <button className="p-1" style={{ marginLeft: '53%' }}>
+            <button className="p-1 primary-button" style={{ marginLeft: '57%' }}>
               Save Custom Food
             </button>
           </div>
@@ -215,7 +220,9 @@ const AddCustomFood = () => {
           <br />
           <MicroNutrition />
         </div>
-        <button className="p-1 mt-5" style={{marginLeft: '88%'}}>Save Custom Food</button>
+        <button className="p-1 mt-5 primary-button" style={{ marginLeft: '88%' }}>
+          Save Custom Food
+        </button>
       </div>
     </div>
   );
