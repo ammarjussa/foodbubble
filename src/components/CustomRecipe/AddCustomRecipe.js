@@ -37,13 +37,13 @@ const AddCustomRecipe = () => {
         </div>
         <button
           className="primary-button align-self-start"
-          style={{ width: '20vw', marginTop: '4%' }}
+          style={{ width: '300px', marginTop: '4%' }}
         >
           Show preview of ingredients
         </button>
         <button
           className="primary-button align-self-start"
-          style={{ width: '23vw', marginTop: '4%' }}
+          style={{ width: '390px', marginTop: '4%' }}
         >
           Add Ingredients to the shopping list
         </button>
@@ -104,7 +104,7 @@ const AddCustomRecipe = () => {
               />
               <button
                 className="primary-button align-self-start"
-                style={{ width: '4vw', padding: '5px', marginLeft: '10%' }}
+                style={{ width: '70px', padding: '5px', marginLeft: '10%' }}
               >
                 Add
               </button>
@@ -122,7 +122,7 @@ const AddCustomRecipe = () => {
               />
               <button
                 className="primary-button align-self-start"
-                style={{ width: '8vw', padding: '5px', marginLeft: '9%' }}
+                style={{ width: '120px', padding: '5px', marginLeft: '9%' }}
               >
                 Upload
               </button>
@@ -130,7 +130,7 @@ const AddCustomRecipe = () => {
             <div className="d-flex flex-column align-items-center px-5">
               <button
                 className="primary-button"
-                style={{ width: '10vw', padding: '5px', alignSelf: 'center' }}
+                style={{ width: '160px', padding: '5px', alignSelf: 'center' }}
               >
                 Save To Recipes
               </button>
