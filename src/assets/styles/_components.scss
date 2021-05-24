@@ -80,7 +80,7 @@
   margin: 50px 0 50px 0;
 
   .home-image {
-    height: 60vh;
+    width: 50vw;
   }
 
   .home-icon {
@@ -93,7 +93,7 @@
   }
 
   .home-image-small {
-    height: 30vh;
+    width: 20vw;
   }
 
   .home-recipe-button {
@@ -202,8 +202,8 @@
       margin-top: 40px;
 
       .avatar {
-        height: 100px;
-        width: 100px;
+        width: 10vw;
+        height: 10vw;
       }
     }
 
@@ -278,20 +278,20 @@
 
 .search-featured {
   .featured-image {
-    height: 30vh;
+    width: 20vw;
     margin-top: 3%;
   }
 }
 
 .search-category {
   img {
-    height: 10vh;
+    width: 10vw;
   }
 }
 
 .search-meal {
   img {
-    height: 20vh;
+    width: 15vw;
   }
 }
 
@@ -422,7 +422,7 @@
   }
 
   .mp-image {
-    height: 20vh;
+    width: 15vw;
     margin-top: 2%;
   }
 }
@@ -437,7 +437,7 @@
 
 .box {
   .box-img {
-    height: 10vh;
+    width: 5vw;
   }
 }
 
