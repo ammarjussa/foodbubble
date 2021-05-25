@@ -24,7 +24,7 @@ const Notifications = () => {
               <Form.Check className="switch-style" type="switch" id="custom-switch3" />
             </div>
           </Form>
-          <button className="align-self-center options-save-button">Save To Profile</button>
+          <button className="align-self-center secondary-button">Save To Profile</button>
         </div>
       </div>
     </>

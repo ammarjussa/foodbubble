@@ -2,17 +2,31 @@
 .main-title {
   font-size: $font-size-vlarge;
   font-weight: $font-weight-heavy;
+
+  @include breakpoint(mobileonly) {
+    font-size: $font-size-large;
+  }
 }
 
 .secondary-title {
   font-size: $font-size-large;
   font-weight: $font-weight-heavy;
+
+  @include breakpoint(mobileonly) {
+    font-size: $font-size-small;
+  }
 }
 
 .normal-label {
   font-size: $font-size-small;
   color: $font-color;
   font-weight: $font-weight-heavy;
+
+  @include breakpoint(mobileonly) {
+    font-size: $font-size-vsmall;
+    font-weight: $font-weight-heavy;
+    color: $font-color;
+  }
 }
 
 .help-text {
@@ -51,6 +65,10 @@
     color: $border-color;
     font-size: 14px;
     padding-left: 10px;
+
+    @include breakpoint(mobileonly) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -81,6 +99,12 @@
 
   .home-image {
     width: 50vw;
+  }
+
+  .home-button {
+    @include breakpoint(mobileonly) {
+      height: 50px;
+    }
   }
 
   .home-icon {
@@ -131,15 +155,15 @@
     }
 
     .section-image-2 {
-     img {
-       width: 90vw;
-       height: 200px;
-     }
+      img {
+        width: 90vw;
+        height: 200px;
+      }
     }
 
     .section-image-3 {
-      width:30vw;
-      height: 300px;
+      width: 30vw;
+      height: 20vw;
     }
   }
 }
@@ -177,10 +201,18 @@
     margin-top: 2%;
     margin-bottom: 20%;
 
+    @include breakpoint(mobileonly) {
+      width: 250px;
+    }
+
     .options-layout {
       margin-left: 35%;
       margin-right: 35%;
       margin-bottom: 20%;
+
+      @include breakpoint(mobileonly) {
+        margin-left: 55px;
+      }
     }
 
     .remove {
@@ -286,6 +318,19 @@
   font-weight: $font-weight-heavy;
   padding: 10%;
   margin-bottom: 10%;
+
+  @include breakpoint(mobileonly) {
+    font-size: $font-size-small;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+
+  @include breakpoint(mobileonly) {
+    display: block;
+  }
 }
 
 .search-featured {
@@ -298,12 +343,20 @@
 .search-category {
   img {
     width: 10vw;
+
+    @include breakpoint(mobileonly) {
+      width: 150px;
+    }
   }
 }
 
 .search-meal {
   img {
     width: 15vw;
+
+    @include breakpoint(mobileonly) {
+      width: 200px;
+    }
   }
 }
 
@@ -418,6 +471,9 @@
 
 //PLANNER_INSTRUCTIONS
 .meal-planner-instructions {
+  padding-left: 5%;
+  padding-right: 5%;
+
   .mp-recipe-title {
     padding-top: 10%;
     font-size: 12px;
@@ -435,21 +491,60 @@
 
   .mp-image {
     width: 15vw;
+    height: 10vw;
     margin-top: 2%;
+
+    @include breakpoint(mobileonly) {
+      width: 150px;
+      height: 100px;
+    }
+  }
+
+  .mp-recipe {
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint(mobileonly) {
+      display: block;
+    }
   }
 }
 
 //CUSTOM_RECIPE
 .find {
   .mp-image {
-    height: 20vh;
+    width: 20vw;
+    height: 15vw;
     margin-top: 2%;
+
+    @include breakpoint(mobileonly) {
+      width: 150px;
+      height: 100px;
+      margin-top: 15%;
+      align-self: center;
+      margin-left: 3vw;
+    }
+  }
+
+  .find-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(mobileonly) {
+      display: inline;
+      align-items: center;
+    }
   }
 }
 
 .box {
   .box-img {
     width: 5vw;
+
+    @include breakpoint(mobileonly) {
+      width: 50px;
+    }
   }
 }
 
@@ -502,6 +597,9 @@
 
 //ADD_RECIPE
 .custom-recipe {
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   label {
     font-size: 14px;
     font-weight: $font-weight-heavy;
@@ -513,7 +611,7 @@
     border: 2px solid $border-color;
     outline: none;
     color: $font-color;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .cr-textarea2 {
@@ -536,6 +634,10 @@
     font-weight: $font-weight-heavy;
     margin-top: 5%;
     text-align: center;
+
+    @include breakpoint(mobileonly) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -576,5 +678,20 @@
 
   .continue-icon {
     color: $font-color;
+  }
+}
+
+//SHOPPING
+.shopping {
+  margin-top: 40px;
+  height: auto;
+  width: 93vw;
+  background-color: ghostwhite;
+  border: 2px solid lavender;
+  margin-bottom: 20%;
+  margin-left: 3%;
+
+  input {
+    margin-left: 20%;
   }
 }

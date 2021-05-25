@@ -8,18 +8,18 @@ const ByMeal = () => {
     <div>
       <SearchHeader title="Search By Meal" placeholder="Search Meal" search />
       <div className="search-meal pt-5 mt-4">
-        <div className="d-flex justify-content-around">
+        <div className="search-container">
           <FoodComponent name="Breakfast" />
           <FoodComponent name="Lunch" />
           <FoodComponent name="Dinner" />
         </div>
-        <div className="d-flex justify-content-around">
+        <div className="search-container">
           <FoodComponent name="Snack" />
           <FoodComponent name="Dessert" />
           <FoodComponent name="Workout" />
         </div>
-        <p className="main-title mt-3">Special Occasions</p>
-        <div className="d-flex justify-content-around">
+        <p className="main-title mt-4">Special Occasions</p>
+        <div className="search-container">
           <FoodComponent name="Anniversary" />
           <FoodComponent name="Christmas" />
           <FoodComponent name="Birthdays" />

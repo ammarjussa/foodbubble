@@ -16,7 +16,7 @@ const RecipeInformation = () => {
   return (
     <>
       <SearchHeader title="Meal Planner" />
-      <div className="px-5 mx-5 meal-planner-instructions">
+      <div className=" meal-planner-instructions">
         <p className="secondary-title">How the Meal Planner Works</p>
         <p className="text">
           The meal planner uses an algorithm to calculate the precise number of calories each user
@@ -32,7 +32,7 @@ const RecipeInformation = () => {
           The auto-generated meal plan includes recipes taken from our extensive and varied recipe
           database that are found suitable to the requirements.
         </p>
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="mp-recipe">
           <Recipe
             title="Meatless Monday Dinner"
             description="Sweet potato chickpea chilli with garlic toast"

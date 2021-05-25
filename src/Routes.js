@@ -25,6 +25,7 @@ import UserNutrition from './components/UserProfile/UserNutrition';
 
 import Household from './components/UserProfile/Household';
 import FavoriteCuisine from './components/UserProfile/FavoriteCuisine';
+import ShoppingList from './components/CustomRecipe/ShoppingList';
 
 function AppRoutes() {
   return (
@@ -51,6 +52,7 @@ function AppRoutes() {
         <Route path="/recipes" exact component={MyCustomRecipes} />
         <Route path="/addrecipe" exact component={AddCustomRecipe} />
         <Route path="/addfood" exact component={AddCustomFood} />
+        <Route path="/shopping" exact component={ShoppingList} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

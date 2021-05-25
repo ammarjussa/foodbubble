@@ -5,7 +5,7 @@ const AddCustomRecipe = () => {
   return (
     <div>
       <SearchHeader title="Add A Custom Recipe" />
-      <div className="custom-recipe p-5 mx-5 d-flex flex-column">
+      <div className="custom-recipe d-flex flex-column">
         <p className="secondary-title">Add Your Own Original Recipe</p>
         <div className="d-flex justify-content-between">
           <div className="d-flex flex-column">
