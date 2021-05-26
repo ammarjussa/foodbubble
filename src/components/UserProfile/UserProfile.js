@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UserProfileHead from './UserProfileHead';
 import HelpIcon from '@material-ui/icons/Help';
+import { useHistory } from 'react-router-dom';
 
-const Preferences = ({ name }) => {
+const Preferences = ({ name, link }) => {
+  const history = useHistory();
+
+  const Navigate = () => {
+    history.push(`/${link}`);
+  };
+
   return (
     <div className="d-flex flex-column align-items-center mb-4">
       <p className="secondary-title">{name}</p>
-      <button className="primary-button align-self-center add">Add</button>
+      <button className="primary-button align-self-center add" onClick={Navigate}>
+        Add
+      </button>
     </div>
   );
 };
 
 const UserProfile = () => {
+  const [privacy, setPrivacy] = useState('');
+  const [journal, setJournal] = useState('');
+  const [measures, setMeasures] = useState('');
+
+  const [height, setHeight] = useState('');
+  const [weight, setWeight] = useState('');
+  const [goals, setGoals] = useState('');
+  const [breakfast, setBreakfast] = useState('');
+  const [lunch, setLunch] = useState('');
+  const [dinner, setDinner] = useState('');
+  const [zone, setZone] = useState('');
+
   return (
     <div>
       <UserProfileHead />
@@ -28,14 +49,14 @@ const UserProfile = () => {
             </div>
           </div>
 
-          <Preferences name="Diet" />
-          <Preferences name="Avoidances" />
-          <Preferences name="Dislikes" />
-          <Preferences name="Nutrition" />
-          <Preferences name="Household" />
-          <Preferences name="Preferred Store" />
-          <Preferences name="Cooking experience" />
-          <Preferences name="Favorite Cuisine" />
+          <Preferences name="Diet" link="dietary" />
+          <Preferences name="Avoidances" link="avoidance" />
+          <Preferences name="Dislikes" link="profile" />
+          <Preferences name="Nutrition" link="nutrition" />
+          <Preferences name="Household" link="household" />
+          <Preferences name="Preferred Store" link="preference" />
+          <Preferences name="Cooking experience" link="experience" />
+          <Preferences name="Favorite Cuisine" link="cuisine" />
         </div>
         <div className="col-sm-2"></div>
         <div className="col-sm-5 d-flex flex-column justify-content-center">
@@ -61,13 +82,25 @@ const UserProfile = () => {
                   </div>
                 </div>
                 <div className="d-flex">
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="privacy"
+                    value="private"
+                    onChange={(e) => setPrivacy(e.target.value)}
+                  />
                   <label className="pl-2" for="private">
                     Private
                   </label>
                 </div>
                 <div className="d-flex">
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="privacy"
+                    value="public"
+                    onChange={(e) => setPrivacy(e.target.value)}
+                  />
                   <label className="pl-2" for="public">
                     Public
                   </label>
@@ -85,13 +118,25 @@ const UserProfile = () => {
                   </div>
                 </div>
                 <div className="d-flex">
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="journal"
+                    value="private"
+                    onChange={(e) => setJournal(e.target.value)}
+                  />
                   <label className="pl-2" for="private">
                     Private
                   </label>
                 </div>
                 <div className="d-flex">
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="journal"
+                    value="public"
+                    onChange={(e) => setJournal(e.target.value)}
+                  />
                   <label className="pl-2" for="public">
                     Public
                   </label>
@@ -109,13 +154,25 @@ const UserProfile = () => {
                   </div>
                 </div>
                 <div className="d-flex">
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="measures"
+                    value="metric"
+                    onChange={(e) => setMeasures(e.target.value)}
+                  />
                   <label className="pl-2" for="metric">
                     Metric
                   </label>
                 </div>
                 <div>
-                  <input className="mt-1" type="radio" name="privacy" />
+                  <input
+                    className="mt-1"
+                    type="radio"
+                    name="measures"
+                    value="us"
+                    onChange={(e) => setMeasures(e.target.value)}
+                  />
                   <label className="pl-2" for="us">
                     US
                   </label>

@@ -15,7 +15,7 @@ const FavoriteCuisine = () => {
     e.preventDefault();
     if (selectedOptions.length > 0) {
       console.log(selectedOptions);
-      history.push('/options');
+      history.push('/profile');
     } else {
       alert('Please select an option');
     }

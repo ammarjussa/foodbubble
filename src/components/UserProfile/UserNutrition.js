@@ -15,7 +15,7 @@ const UserNutrition = () => {
     e.preventDefault();
     if (selectedOptions.length > 0) {
       console.log(selectedOptions);
-      history.push('/household');
+      history.push('/profile');
     } else {
       alert('Please select an option');
     }

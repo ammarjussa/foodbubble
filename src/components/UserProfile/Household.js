@@ -15,7 +15,7 @@ const Household = () => {
       alert('Adults and Children must be zero or greater');
     }
     console.log(adults, children);
-    history.push('/experience');
+    history.push('/profile');
   };
 
   return (

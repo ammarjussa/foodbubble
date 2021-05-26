@@ -15,7 +15,7 @@ const CookingExperience = () => {
     e.preventDefault();
     if (selectedOption.length > 0) {
       console.log(selectedOption);
-      history.push('/cuisine');
+      history.push('/profile');
     } else {
       alert('Please select an option');
     }

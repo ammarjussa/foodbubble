@@ -15,7 +15,7 @@ const DietaryRequirements = () => {
     e.preventDefault();
     if (selectedOptions.length > 0) {
       console.log(selectedOptions);
-      history.push('/avoidance');
+      history.push('/profile');
     } else {
       alert('Please select an option');
     }
