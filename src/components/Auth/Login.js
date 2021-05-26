@@ -1,27 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import HelpIcon from '@material-ui/icons/Help';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const history = useHistory();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(email, password);
+    history.push('/profile');
+  };
+
   return (
     <div className="login-component">
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="email"
+              placeholder="Enter email"
+            />
           </Form.Group>
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Enter password" />
+            <Form.Control
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter password"
+            />
           </Form.Group>
         </Form.Row>
-        <Button type="submit">Login</Button>
+        <Button type="submit" onClick={onSubmit}>
+          Login
+        </Button>
       </Form>
-      <div class="txt-register">
+      <div className="txt-register">
         Don't have an account? <Link to="/register">Register</Link>
       </div>
     </div>
