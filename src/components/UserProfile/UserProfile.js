@@ -185,15 +185,32 @@ const UserProfile = () => {
               <p className="secondary-title">User Details</p>
               <div className="d-flex flex-column">
                 <label for="height">Height</label>
-                <input className="primary-input" type="text" />
+                <input
+                  className="primary-input"
+                  type="text"
+                  value={height}
+                  onChange={(e) => setHeight(e.target.value)}
+                />
               </div>
               <div className="d-flex flex-column mt-2">
                 <label for="us">Weight (Kg)</label>
-                <input placeholder="100" className="primary-input" type="text" />
+                <input
+                  placeholder="100"
+                  className="primary-input"
+                  type="text"
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                />
               </div>
               <div className="d-flex flex-column mt-2">
                 <label for="us">Health Goals</label>
-                <input placeholder="Active" className="primary-input" type="text" />
+                <input
+                  placeholder="Active"
+                  className="primary-input"
+                  type="text"
+                  value={goals}
+                  onChange={(e) => setGoals(e.target.value)}
+                />
               </div>
             </div>
             <div className="d-flex flex-column align-items-start">
@@ -209,15 +226,33 @@ const UserProfile = () => {
               </div>
               <div className="d-flex flex-column">
                 <label for="us">Breakfast At</label>
-                <input placeholder="07:00" className="primary-input" type="text" />
+                <input
+                  placeholder="07:00"
+                  className="primary-input"
+                  type="text"
+                  value={breakfast}
+                  onChange={(e) => setBreakfast(e.target.value)}
+                />
               </div>
               <div className="d-flex flex-column mt-2">
                 <label for="us">Lunch At</label>
-                <input placeholder="13:00" className="primary-input" type="text" />
+                <input
+                  placeholder="13:00"
+                  className="primary-input"
+                  type="text"
+                  value={lunch}
+                  onChange={(e) => setLunch(e.target.value)}
+                />
               </div>
               <div className="d-flex flex-column mt-2">
                 <label for="us">Dinner At</label>
-                <input placeholder="19:00" className="primary-input" type="text" />
+                <input
+                  placeholder="19:00"
+                  className="primary-input"
+                  type="text"
+                  value={dinner}
+                  onChange={(e) => setDinner(e.target.value)}
+                />
               </div>
             </div>
           </div>
@@ -225,9 +260,22 @@ const UserProfile = () => {
           <div className="pt-5 d-flex justify-content-between align-items-center">
             <div className="d-flex flex-column">
               <p className="secondary-title">TimeZone</p>
-              <input placeholder="19:00" className="primary-input" type="text" />
+              <input
+                placeholder="19:00"
+                className="primary-input"
+                type="text"
+                value={zone}
+                onChange={(e) => setZone(e.target.value)}
+              />
             </div>
-            <button className="primary-button">Save Profile</button>
+            <button
+              onClick={() => {
+                console.log(height, weight, lunch, zone, dinner, privacy, measures);
+              }}
+              className="primary-button"
+            >
+              Save Profile
+            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UserProfileHeader from '../common/UserProfileHeader';
 
 const Feedback = () => {
+  const [feedback, setFeedback] = useState('');
+
   return (
     <>
       <UserProfileHeader />
@@ -18,8 +20,14 @@ const Feedback = () => {
           </div>
           <div className="d-flex flex-column justify-content-center align-items-start">
             <p>Details</p>
-            <textarea className="feedback-textarea"></textarea>
-            <button className="secondary-button mr-5 mt-5">Submit</button>
+            <textarea
+              className="feedback-textarea"
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+            ></textarea>
+            <button className="secondary-button mr-5 mt-5" onClick={() => console.log(feedback)}>
+              Submit
+            </button>
           </div>
         </div>
       </div>
