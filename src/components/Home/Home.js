@@ -3,8 +3,11 @@ import Separator from '../Layout/Separator';
 import AccessibilityIcon from '@material-ui/icons/Accessibility';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { useHistory } from 'react-router-dom';
 
 const Home = function () {
+  const history = useHistory();
+
   return (
     <div className="home-component">
       <img
@@ -69,7 +72,14 @@ const Home = function () {
               {' '}
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <button className="home-recipe-button">View Recipe</button>
+            <button
+              className="home-recipe-button"
+              onClick={() => {
+                history.push('/recipes');
+              }}
+            >
+              View Recipe
+            </button>
           </div>
           <div>
             <img
@@ -81,7 +91,14 @@ const Home = function () {
               {' '}
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <button className="home-recipe-button">View Recipes</button>
+            <button
+              className="home-recipe-button"
+              onClick={() => {
+                history.push('/recipes');
+              }}
+            >
+              View Recipes
+            </button>
           </div>
           <div>
             <img
@@ -93,7 +110,14 @@ const Home = function () {
               {' '}
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <button className="home-recipe-button">View Recipes</button>
+            <button
+              className="home-recipe-button"
+              onClick={() => {
+                history.push('/recipes');
+              }}
+            >
+              View Recipes
+            </button>
           </div>
         </div>
       </div>

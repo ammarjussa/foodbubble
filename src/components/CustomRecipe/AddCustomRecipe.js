@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchHeader from '../common/SearchHeader';
 
 const AddCustomRecipe = () => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [instruction, setInstruction] = useState('');
+  const [rating, setRating] = useState('');
+
+  const [quantity, setQuantity] = useState('');
+  const [time, setTime] = useState({
+    ready: '',
+    preparation: '',
+    cooking: '',
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(title);
+    console.log(description);
+    console.log(instruction);
+    console.log(rating);
+    console.log(time);
+  };
+
   return (
     <div>
       <SearchHeader title="Add A Custom Recipe" />
@@ -10,16 +31,18 @@ const AddCustomRecipe = () => {
         <div className="d-flex justify-content-between">
           <div className="d-flex flex-column">
             <div className="d-flex flex-column align-items-start">
-              <label for="title">Name</label>
+              <label for="title">Title</label>
               <input
                 className="primary-input mb-4"
                 style={{ width: '25vw' }}
                 placeholder="Name of Recipe"
                 type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="d-flex flex-column align-items-start">
-              <label for="description">Ingredients</label>
+              <label for="ingredients">Ingredients</label>
               <textarea className="cr-textarea"></textarea>
             </div>
           </div>
@@ -31,6 +54,8 @@ const AddCustomRecipe = () => {
                 style={{ width: '25vw' }}
                 placeholder="Description of Recipe"
                 type="text"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               />
             </div>
           </div>
@@ -50,13 +75,17 @@ const AddCustomRecipe = () => {
 
         <div className="d-flex justify-content-between mt-5 pt-5">
           <div className="d-flex flex-column align-items-start">
-            <label for="description">Cooking Instructions</label>
-            <textarea className="cr-textarea2"></textarea>
+            <label for="instruction">Cooking Instructions</label>
+            <textarea
+              className="cr-textarea2"
+              onChange={(e) => setInstruction(e.target.value)}
+              value={instruction}
+            ></textarea>
           </div>
           <div className="d-flex flex-column align-items-start">
             <label for="description">Your Rating</label>
             <div className="dropdown">
-              <select name="cars" id="cars">
+              <select name="cars" id="cars" onChange={(e) => setRating(e.target.value)}>
                 <option value="0">0-No Information</option>
                 <option value="1">1-Star - Disguisting</option>
                 <option value="2">2-Stars - OK, would not make again</option>
@@ -73,24 +102,32 @@ const AddCustomRecipe = () => {
               style={{ width: '15vw' }}
               placeholder="Servings QTY"
               type="text"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
             />
             <input
               className="primary-input mb-4"
               style={{ width: '15vw' }}
               placeholder="Ready in (Mins)"
               type="text"
+              value={time.ready}
+              onChange={(e) => setTime({ ...time, ready: e.target.value })}
             />
             <input
               className="primary-input mb-4"
               style={{ width: '15vw' }}
               placeholder="Preparation Time (Mins)"
               type="text"
+              value={time.preparation}
+              onChange={(e) => setTime({ ...time, preparation: e.target.value })}
             />
             <input
               className="primary-input mb-4"
               style={{ width: '15vw' }}
               placeholder="Cooking Time (Mins)"
               type="text"
+              value={time.cooking}
+              onChange={(e) => setTime({ ...time, cooking: e.target.value })}
             />
           </div>
 
@@ -118,7 +155,6 @@ const AddCustomRecipe = () => {
                 style={{ width: '23vw' }}
                 placeholder="Upload Images (Max 3MB jpg)"
                 type="text"
-                disabled
               />
               <button
                 className="primary-button align-self-start"
@@ -131,6 +167,7 @@ const AddCustomRecipe = () => {
               <button
                 className="primary-button"
                 style={{ width: '160px', padding: '5px', alignSelf: 'center' }}
+                onClick={onSubmit}
               >
                 Save To Recipes
               </button>

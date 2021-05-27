@@ -5,7 +5,9 @@ const PlusComponent = () => {
   return (
     <div className="plus">
       <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
+        <button class="dropbtn">
+          <p>+</p>
+        </button>
         <div class="dropdown-content">
           <Link to="/addrecipe">Add Custom Recipes</Link>
           <Link to="#">Save Recipe link</Link>

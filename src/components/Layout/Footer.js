@@ -29,7 +29,7 @@ const AppFooter = () => {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/">Meal Planner</Link>
+                  <Link to="/planner">Meal Planner</Link>
                 </li>
                 <li>
                   <Link to="/">Contact Us</Link>
@@ -43,7 +43,7 @@ const AppFooter = () => {
                   <Link to="/recipes">Recipes</Link>
                 </li>
                 <li>
-                  <Link to="/">Search Recipes</Link>
+                  <Link to="/search">Search Recipes</Link>
                 </li>
                 <li>
                   <Link to="/">Shop</Link>
