@@ -5,20 +5,20 @@ import imgMealPlanner from '../../assets/images/img-meal-planner.png';
 
 const UserProfileHeader = () => {
   return (
-    <div className="d-flex justify-content-around profile-header">
+    <div className="profile-header">
       <div className="d-flex flex-column align-items-center">
-        <Avatar className="p-4" style={{ width: '10vw', height: '10vw' }} />
+        <Avatar style={{ width: '10vw', height: '10vw' }} />
         <p className="main-title mt-4">User Name</p>
       </div>
-      <div>
+      <div className="search-items">
         <p className="main-title">User Profile</p>
         <div className="profile-search">
           <input className="primary-input" type="text" placeholder="Search Recipes" />
           <SearchIcon className="search-icon" />
         </div>
       </div>
-      <div>
-        <img className="w-50" src={imgMealPlanner} alt="calendar icon" />
+      <div className="d-flex flex-column">
+        <img className="w-50 align-self-center" src={imgMealPlanner} alt="calendar icon" />
       </div>
     </div>
   );

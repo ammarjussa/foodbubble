@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const SearchHeader = ({ title, placeholder, search }) => {
   return (
-    <div className="d-flex justify-content-around align-items-end profile-header">
+    <div className="profile-header">
       <div></div>
-      <div>
+      <div className="search-items">
         <p className="main-title">{title}</p>
         {search ? (
           <div className="profile-search">

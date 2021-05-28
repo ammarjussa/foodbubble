@@ -7,13 +7,13 @@ import { Avatar } from '@material-ui/core';
 const UserProfileHead = () => {
   return (
     <div>
-      <div className="d-flex justify-content-around profile-header">
+      <div className="profile-header">
         <div className="d-flex flex-column align-items-center">
-          <Avatar className="p-4" style={{ height: '10vw', width: '10vw' }} />
+          <Avatar style={{ height: '10vw', width: '10vw' }} />
           <p className="main-title mt-4">User Name</p>
         </div>
 
-        <div>
+        <div className="search-items">
           <p className="main-title">User Profile</p>
           <div className="profile-search">
             <input className="primary-input" type="text" placeholder="Search Recipes" />

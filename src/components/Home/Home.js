@@ -4,6 +4,7 @@ import AccessibilityIcon from '@material-ui/icons/Accessibility';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = function () {
   const history = useHistory();
@@ -20,10 +21,10 @@ const Home = function () {
         <input disabled className="primary-input ml-3 mr-4" placeholder="Add your ingredients" />
         <button className="primary-button home-button">Add Ingredient</button>
       </div>
-      <div className="d-flex align-items-center justify-content-around m-5 pl-5 pr-5  ">
-        <p>Ingredients</p>
-        <p>Receipes</p>
-        <p>Meal Planner</p>
+      <div className="home-links m-5 pl-5 pr-5  ">
+        <Link to="/">Ingredients</Link>
+        <Link to="/">Recipes</Link>
+        <Link to="/">Meal Planner</Link>
       </div>
 
       <Separator />
