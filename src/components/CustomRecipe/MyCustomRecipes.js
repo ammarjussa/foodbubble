@@ -18,8 +18,8 @@ const MyCustomRecipes = () => {
           <BoxComponent title="Chinese" number={10} />
           <PlusComponent />
         </div>
+        <Find />
       </div>
-      <Find />
     </>
   );
 };

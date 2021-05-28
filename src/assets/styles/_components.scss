@@ -511,32 +511,6 @@
 }
 
 //CUSTOM_RECIPE
-.find {
-  .mp-image {
-    width: 20vw;
-    height: 15vw;
-    margin-top: 2%;
-
-    @include breakpoint(mobileonly) {
-      width: 150px;
-      height: 100px;
-      margin-top: 15%;
-      align-self: center;
-      margin-left: 3vw;
-    }
-  }
-
-  .find-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include breakpoint(mobileonly) {
-      display: inline;
-      align-items: center;
-    }
-  }
-}
 
 .box {
   .box-img {

@@ -60,7 +60,7 @@ const About = function () {
               <h4 className="meal-planner-txt">Create Your Meal Planner</h4>
             </div>
           </div>
-          <div className="section-image-2 w-100">
+          <div className="section-image-2">
             <img
               className="home-image"
               alt="food demo"
