@@ -220,7 +220,7 @@
 
   .options-table {
     height: auto;
-    width: 30vw;
+    width: 40vw;
     background-color: #dfe6ed;
     display: flex;
     flex-direction: column;
@@ -228,6 +228,7 @@
     padding-bottom: 2%;
     margin-top: 2%;
     margin-bottom: 20%;
+    justify-content: center;
 
     @include breakpoint(mobileonly) {
       width: 250px;

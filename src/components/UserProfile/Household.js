@@ -24,9 +24,9 @@ const Household = () => {
       <div className="d-flex flex-column align-items-center profile-options">
         <p className="secondary-title">Household</p>
         <div className="options-table">
-          <div className="ml-5 mr-5 mb-5 pb-5">
-            <div className="d-flex align-items-start justify-content-between">
-              <p className="main-title">Adults</p>
+          <div className="ml-5 mr-5 mb-5 mt-5">
+            <div className="d-flex align-items-center justify-content-between">
+              <p className="secondary-title">Adults</p>
               <div>
                 <CounterComponent
                   number={adults}
@@ -41,8 +41,8 @@ const Household = () => {
               </div>
             </div>
             <div className="mt-5"></div>
-            <div className="d-flex align-items-start justify-content-between">
-              <p className="main-title">Children</p>
+            <div className="d-flex align-items-center justify-content-between">
+              <p className="secondary-title">Children</p>
               <div>
                 <CounterComponent
                   number={children}
@@ -57,7 +57,7 @@ const Household = () => {
               </div>
             </div>
           </div>
-          <button className="secondary-button align-self-center" onClick={SaveAction}>
+          <button className="secondary-button align-self-center mb-5" onClick={SaveAction}>
             Save To Profile
           </button>
         </div>
