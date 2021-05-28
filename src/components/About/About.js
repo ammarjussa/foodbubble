@@ -60,33 +60,34 @@ const About = function () {
               <h4 className="meal-planner-txt">Create Your Meal Planner</h4>
             </div>
           </div>
-          <div className="section-image-2 mt-4">
+          <div className="section-image-2 w-100">
             <img
               className="home-image"
               alt="food demo"
               src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
             />
           </div>
+        </div>
+      </section>
 
-          <div className="mt-5 pt-5">
-            <p className="main-title pl-3">What should I make?</p>
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <p className="col-md-10">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </p>
-                <button className="primary-button ml-3 mt-5">Try it Now</button>
-              </div>
-              <img
-                className="section-image-3"
-                alt="food demo"
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
-              />
-            </div>
-          </div>
+      <section className="section-meal-planner">
+        <p className="main-title">What should I make?</p>
+        <div className="row">
+          <p className="col-md-7">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum
+            is simply dummy text of the printing and typesetting industry.
+            <br />
+            <br />
+            <br />
+            <button className="primary-button">Try it Now</button>
+          </p>
+          <img
+            className="section-image-3 col-md-5"
+            alt="food demo"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+          />
         </div>
       </section>
     </div>
