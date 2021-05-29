@@ -556,14 +556,13 @@
     width: 80px;
 
     @include breakpoint(mobileonly) {
-     
     }
   }
 }
 
 .plus {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   .dropdown {
     display: inline-block;
   }
@@ -623,6 +622,40 @@
     font-weight: $font-weight-heavy;
   }
 
+  .small-input {
+    width: 80px;
+  }
+
+  .macro {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(mobileonly) {
+      display: block;
+    }
+  }
+
+  .upload-image {
+    display: flex;
+
+    @include breakpoint(mobileonly) {
+      display: block;
+    }
+  }
+
+  .save {
+    margin-left: 57%;
+    @include breakpoint(mobileonly) {
+      margin-left: 20%;
+    }
+  }
+
+  .marg {
+    @include breakpoint(mobileonly) {
+      margin-top: 15%;
+    }
+  }
+
   .cr-textarea {
     width: 25vw;
     height: 10vw;
@@ -662,6 +695,11 @@
 .micro-nutrition {
   color: #318ada;
   font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 //COUNTER_COMPONENT
