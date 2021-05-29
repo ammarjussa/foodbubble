@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const PlusComponent = () => {
   return (
     <div className="plus">
-      <div class="dropdown">
-        <button class="dropbtn">
+      <div className="dropdown">
+        <button className="dropbtn">
           <p>+</p>
         </button>
-        <div class="dropdown-content">
+        <div className="dropdown-content">
           <Link to="/addrecipe">Add Custom Recipes</Link>
           <Link to="#">Save Recipe link</Link>
           <Link to="#">Create Recipe</Link>

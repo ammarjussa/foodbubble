@@ -8,9 +8,9 @@ const MyCustomRecipes = () => {
   return (
     <>
       <SearchHeader title="My Custom Recipes" />
-      <div className="p-5 mr-5">
+      <div className="p-5">
         <p className="secondary-title">My Custom Recipe Boxes</p>
-        <div className="d-flex justify-content-around">
+        <div className="my-custom-recipes">
           <BoxComponent title="All" number={10} />
           <BoxComponent title="Favorites" number={10} />
           <BoxComponent title="Indian" number={10} />

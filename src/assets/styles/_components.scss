@@ -541,19 +541,30 @@
 
 //CUSTOM_RECIPE
 
+.my-custom-recipes {
+  display: flex;
+  justify-content: space-around;
+
+  @include breakpoint(mobileonly) {
+    display: block;
+  }
+}
+
 .box {
   .box-img {
-    width: 5vw;
+    height: 80px;
+    width: 80px;
 
     @include breakpoint(mobileonly) {
-      width: 50px;
+     
     }
   }
 }
 
 .plus {
+  display: flex;
+  justify-content:center;
   .dropdown {
-    position: relative;
     display: inline-block;
   }
 
@@ -564,7 +575,6 @@
     width: 70px;
     border: none;
     cursor: pointer;
-    margin-left: 40%;
     border-radius: 50%;
 
     p {
