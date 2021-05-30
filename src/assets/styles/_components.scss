@@ -751,3 +751,87 @@
     margin-left: 20%;
   }
 }
+
+.sync-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10%;
+  margin-bottom: 3%;
+
+  @include breakpoint(mobileonly) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.sync-image-food {
+  width: 350px;
+  height: 250px;
+
+  @include breakpoint(tablet) {
+    width: 220px;
+    height: 150px;
+    margin-top: 10%;
+  }
+}
+
+.alexa {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  @include breakpoint(mobileonly) {
+    flex-direction: column;
+  }
+
+  button {
+    margin-bottom: 3%;
+    @include breakpoint(mobileonly) {
+      align-self: center;
+      margin-top: 5%;
+    }
+  }
+  .voice-image {
+    margin-top: 5%;
+    width: 800px;
+    height: 550px;
+
+     @include breakpoint(tablet) {
+      width: 420px;
+      height: 250px;
+    }
+
+    @include breakpoint(mobileonly) {
+      width: 220px;
+      height: 150px;
+    }
+  }
+}
+
+.wine {
+  padding: 5%;
+}
+.work {
+  .work-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    @include breakpoint(mobileonly) {
+      margin-top: 5%;
+    }
+    .work-img {
+      width: 250px;
+      height: 200px;
+    }
+
+    .work-text {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 10%;
+    }
+  }
+}
