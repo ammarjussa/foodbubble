@@ -26,6 +26,8 @@ import UserNutrition from './components/UserProfile/UserNutrition';
 import Household from './components/UserProfile/Household';
 import FavoriteCuisine from './components/UserProfile/FavoriteCuisine';
 import ShoppingList from './components/CustomRecipe/ShoppingList';
+import VoiceSearch from './components/Features/VoiceSearch';
+import SyncCalendar from './components/Features/SyncCalendar';
 
 function AppRoutes() {
   return (
@@ -53,6 +55,8 @@ function AppRoutes() {
         <Route path="/addrecipe" exact component={AddCustomRecipe} />
         <Route path="/addfood" exact component={AddCustomFood} />
         <Route path="/shopping" exact component={ShoppingList} />
+        <Route path="/voice" component={VoiceSearch} />
+        <Route path="/sync" component={SyncCalendar} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
