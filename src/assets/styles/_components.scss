@@ -13,7 +13,7 @@
   font-weight: $font-weight-heavy;
 
   @include breakpoint(mobileonly) {
-    font-size: $font-size-small;
+    font-size: 18px;
   }
 }
 
@@ -845,5 +845,16 @@
       margin-right: 5%;
       margin-top: 10%;
     }
+  }
+}
+
+.recipe-equipment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @include breakpoint(mobileonly) {
+    margin-top: 10%;
+    justify-content: start;
   }
 }

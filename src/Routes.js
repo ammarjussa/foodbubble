@@ -29,6 +29,8 @@ import ShoppingList from './components/CustomRecipe/ShoppingList';
 import VoiceSearch from './components/Features/VoiceSearch';
 import SyncCalendar from './components/Features/SyncCalendar';
 
+import Recipe from './components/CustomRecipe/Recipe'
+
 function AppRoutes() {
   return (
     <Router>
@@ -57,6 +59,7 @@ function AppRoutes() {
         <Route path="/shopping" exact component={ShoppingList} />
         <Route path="/voice" component={VoiceSearch} />
         <Route path="/sync" component={SyncCalendar} />
+        <Route path="/recipe" component={Recipe} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
