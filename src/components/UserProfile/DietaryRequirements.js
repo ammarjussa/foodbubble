@@ -8,7 +8,11 @@ const DietaryRequirements = () => {
   const history = useHistory();
 
   const handleOptionChange = (e) => {
-    setSelectedOptions([...selectedOptions, e.target.value]);
+    if (e.target.checked) {
+      setSelectedOptions([...selectedOptions, e.target.value]);
+    } else {
+      setSelectedOptions(selectedOptions.filter((item) => item !== e.target.value));
+    }
   };
 
   const SaveAction = (e) => {
