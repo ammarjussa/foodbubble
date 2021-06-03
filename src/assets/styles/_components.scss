@@ -243,16 +243,15 @@
         margin-left: 55px;
       }
     }
-
-    .remove {
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    }
   }
 }
 
+.remove {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
 //USER_PROFILE_OPTIONS
 .user-profile-options {
   padding-top: 3%;
@@ -755,7 +754,6 @@
     height: 35px;
     width: 35px;
     cursor: pointer;
-    opacity: 0.4;
 
     @include breakpoint(mobileonly) {
       width: 20px;

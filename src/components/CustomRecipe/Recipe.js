@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchHeader from '../common/SearchHeader';
 import CounterComponent from '../common/CounterComponent';
 import { Form } from 'react-bootstrap';
+import { history, useHistory } from 'react-router-dom';
 
 const Recipe = () => {
+  const [servings, setServings] = useState(0);
+  const history = useHistory();
+  const [ingCheck, setIngCheck] = useState(false);
+  const [equiCheck, setEquiCheck] = useState(false);
+
   return (
     <>
       <SearchHeader title="Recipe" />
@@ -37,23 +43,46 @@ const Recipe = () => {
               <p className="secondary-title">Ingredients</p>
               <div>
                 <label className="normal-label">Servings</label>
-                <CounterComponent />
+                <CounterComponent
+                  number={servings}
+                  onClickInc={() => setServings(servings + 1)}
+                  onClickDec={() => {
+                    setServings(servings - 1);
+                  }}
+                />
               </div>
               <div className="d-flex flex-column align-items-center ">
-                <Form.Check className="switch-style" type="switch" id="custom-switch" />
+                <Form.Check
+                  className="switch-style"
+                  type="switch"
+                  id="ingredients"
+                  onChange={(e) => setIngCheck(!e.target.checked)}
+                />
                 <p className="secondary-title">Grid |List </p>
               </div>
             </div>
             <div className="recipe-equipment col-md-7">
-              <p className="secondary-title">Eqiuipment</p>
+              <p className="secondary-title">Equipment</p>
               <div className="d-flex flex-column align-items-center">
-                <Form.Check className="switch-style" type="switch" id="custom-switch" />
+                <Form.Check
+                  className="switch-style"
+                  type="switch"
+                  id="equipment"
+                  onChange={(e) => setEquiCheck(!e.target.checked)}
+                />
                 <p className="secondary-title">Grid |List </p>
               </div>
             </div>
           </div>
           <div className="mt-5">
-            <button className="secondary-button">Add Ingredients to Shopping List</button>
+            <button
+              className="secondary-button"
+              onClick={() => {
+                history.push('/shopping');
+              }}
+            >
+              Add Ingredients to Shopping List
+            </button>
           </div>
           <div className="row mt-5">
             <div className="col-md-6">

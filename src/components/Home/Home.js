@@ -22,9 +22,9 @@ const Home = function () {
         <button className="primary-button home-button">Add Ingredient</button>
       </div>
       <div className="home-links m-5 pl-5 pr-5  ">
-        <Link to="/">Ingredients</Link>
-        <Link to="/">Recipes</Link>
-        <Link to="/">Meal Planner</Link>
+        <Link to="/shopping">Ingredients</Link>
+        <Link to="/recipes">Recipes</Link>
+        <Link to="/planner">Meal Planner</Link>
       </div>
 
       <Separator />
