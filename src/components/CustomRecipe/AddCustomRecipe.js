@@ -83,9 +83,9 @@ const AddCustomRecipe = () => {
             ></textarea>
           </div>
           <div className="d-flex flex-column align-items-start">
-            <label for="description">Your Rating</label>
-            <div className="dropdown">
-              <select name="cars" id="cars" onChange={(e) => setRating(e.target.value)}>
+            <div className="select-dropdown ml-5">
+              <label for="description">Your Rating</label>
+              <select name="ratings" id="ratings" onChange={(e) => setRating(e.target.value)}>
                 <option value="0">0-No Information</option>
                 <option value="1">1-Star - Disguisting</option>
                 <option value="2">2-Stars - OK, would not make again</option>

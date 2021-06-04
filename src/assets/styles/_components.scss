@@ -871,3 +871,13 @@
     }
   }
 }
+
+.select-dropdown {
+  select {
+    border: 2px solid $border-color;
+    outline: none;
+    font-size: $font-size-small;
+    color: $font-color;
+    height: 35px;
+  }
+}

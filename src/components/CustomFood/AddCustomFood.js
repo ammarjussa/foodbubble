@@ -127,9 +127,9 @@ const AddCustomFood = () => {
                 onChange={(e) => setPrice(e.target.value)}
               />
             </div>
-            <div className="pb-5 mb-5">
+            <div className="pb-5 mb-5 select-dropdown">
               <p className="secondary-title">Choose Custom Food Box</p>
-              <select name="food-box" id="food-box">
+              <select name="food-box" id="food-box" >
                 <option value="favorite">Favorite</option>
                 <option value="italian">Italian</option>
                 <option value="french">French</option>
