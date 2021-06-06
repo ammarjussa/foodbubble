@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchHeader from '../common/SearchHeader';
+import HelpIcon from '@material-ui/icons/Help';
 
 const dietary = [
   'Vegetarian',
@@ -28,7 +29,7 @@ const intolerances = [
   'Corn',
 ];
 
-const macro = ['Calories', 'Protein (g)', 'Fat(g)', 'Carbs (g)'];
+const macro = ['Calories', 'Protein (g)', 'Fat (g)', 'Carbs (g)'];
 
 const micro = [
   [
@@ -101,6 +102,24 @@ const AddCustomFood = () => {
   const [diet, setDiet] = useState([]);
   const [intol, setIntol] = useState([]);
 
+  console.log(diet);
+
+  const handleDietaryChange = (e) => {
+    if (e.target.checked) {
+      setDiet([...diet, e.target.value]);
+    } else {
+      setDiet(diet.filter((item) => item !== e.target.value));
+    }
+  };
+
+  const handleIntoleranceChange = (e) => {
+    if (e.target.checked) {
+      setIntol([...intol, e.target.value]);
+    } else {
+      setIntol(intol.filter((item) => item !== e.target.value));
+    }
+  };
+
   return (
     <div>
       <SearchHeader title="Add Custom Food" />
@@ -128,8 +147,11 @@ const AddCustomFood = () => {
               />
             </div>
             <div className="pb-5 mb-5 select-dropdown">
-              <p className="secondary-title">Choose Custom Food Box</p>
-              <select name="food-box" id="food-box" >
+              <div className="d-flex">
+                <p className="secondary-title">Choose Custom Food Box</p>
+                <HelpIcon className="help ml-1" />
+              </div>
+              <select name="food-box" id="food-box" onChange={(e) => setBox(e.target.value)}>
                 <option value="favorite">Favorite</option>
                 <option value="italian">Italian</option>
                 <option value="french">French</option>
@@ -138,10 +160,19 @@ const AddCustomFood = () => {
             </div>
           </div>
           <div className="col-md-3">
-            <p className="secondary-title">Dietary</p>
+            <div className="d-flex">
+              <p className="secondary-title">Dietary</p>
+              <HelpIcon className="help ml-1" />
+            </div>
             {dietary.map((diet) => (
               <div>
-                <input type="checkbox" id={diet} name="dietary" value={diet} />
+                <input
+                  type="checkbox"
+                  id={diet}
+                  name="dietary"
+                  value={diet}
+                  onChange={handleDietaryChange}
+                />
                 &nbsp;
                 <label for="veg">{diet}</label>
               </div>
@@ -149,10 +180,19 @@ const AddCustomFood = () => {
           </div>
 
           <div className="col-md-3">
-            <p className="secondary-title marg">Intolerances</p>
+            <div className="d-flex">
+              <p className="secondary-title marg">Intolerances</p>
+              <HelpIcon className="help ml-1" />
+            </div>
             {intolerances.map((diet) => (
               <div>
-                <input type="checkbox" id={diet} name="intolerances" value={diet} />
+                <input
+                  type="checkbox"
+                  id={diet}
+                  name="intolerances"
+                  value={diet}
+                  onChange={handleIntoleranceChange}
+                />
                 &nbsp;
                 <label for="veg">{diet}</label>
               </div>
@@ -162,7 +202,10 @@ const AddCustomFood = () => {
 
         <div className="d-flex align-items-center row marg">
           <div className="col-md-6">
-            <p className="secondary-title">Macro Nutrition Per Serving</p>
+            <div className="d-flex">
+              <p className="secondary-title">Macro Nutrition Per Serving</p>
+              <HelpIcon className="help ml-1" />
+            </div>
             <div className="macro">
               {macro.map((mac) => (
                 <div className="d-flex flex-column align-items-center">
