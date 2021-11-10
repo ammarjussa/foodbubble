@@ -23,7 +23,7 @@ const RecipeInformation2 = () => {
         </p>
         <br />
         <br />
-	<button className="secondary-button">Create A Meal Planner</button>
+        <button className="secondary-button">Create A Meal Planner</button>
       </div>
     </div>
   );
