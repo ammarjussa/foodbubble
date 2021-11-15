@@ -3,8 +3,8 @@ import React from 'react';
 const SidebarRow = ({ text }) => {
   return (
     <div
-      className="d-flex justify-content-start align-items-end pl-3"
-      style={{ height: '60px', backgroundColor: '#f1f1f1', border: '1px solid gray' }}
+      className="sidebar-row d-flex justify-content-start align-items-end pl-3"
+      style={{  }}
     >
       <p>{text}</p>
     </div>
