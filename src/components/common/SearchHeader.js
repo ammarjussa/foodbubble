@@ -18,7 +18,7 @@ const SearchHeader = ({ title, placeholder, search }) => {
       </div>
       <div className="d-flex flex-column align-items-center">
         <img className="w-50" src={imgMealPlanner} alt="calendar icon" />
-        <Link className="search-link" to="/">
+        <Link className="search-link" to="/mealplanner">
           View Planner
         </Link>
       </div>

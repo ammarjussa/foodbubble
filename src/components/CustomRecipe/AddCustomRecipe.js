@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import SearchHeader from '../common/SearchHeader';
+import { useHistory } from 'react-router-dom';
 
 const AddCustomRecipe = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [instruction, setInstruction] = useState('');
   const [rating, setRating] = useState('');
+  const history = useHistory();
 
   const [quantity, setQuantity] = useState('');
   const [time, setTime] = useState({
@@ -69,6 +71,7 @@ const AddCustomRecipe = () => {
         <button
           className="primary-button align-self-start"
           style={{ width: '390px', marginTop: '4%' }}
+          onClick={() => history.push('/shopping')}
         >
           Add Ingredients to the shopping list
         </button>

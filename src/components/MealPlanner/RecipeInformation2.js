@@ -1,7 +1,10 @@
 import React from 'react';
 import SearchHeader from '../common/SearchHeader';
+import { useHistory } from 'react-router-dom';
 
 const RecipeInformation2 = () => {
+  const history = useHistory();
+
   return (
     <div>
       <SearchHeader title="Meal Planner" />
@@ -23,7 +26,9 @@ const RecipeInformation2 = () => {
         </p>
         <br />
         <br />
-        <button className="secondary-button">Create A Meal Planner</button>
+        <button className="secondary-button" onClick={() => history.push('/mealplanner')}>
+          Create A Meal Planner
+        </button>
       </div>
     </div>
   );
