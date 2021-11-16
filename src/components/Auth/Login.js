@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import axios from '../../axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,10 +10,18 @@ const Login = () => {
 
   const history = useHistory();
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
-    history.push('/profile');
+    try {
+      const response = await axios.post('/user', {
+        email,
+        password,
+      });
+      alert(response);
+      history.push('/login');
+    } catch (err) {
+      alert(err);
+    }
   };
 
   return (
