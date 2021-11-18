@@ -3,8 +3,12 @@ import { Button, Form, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import axios from '../../axios';
+import { useDispatch } from 'react-redux';
+import { login } from '../../actions';
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,16 +16,20 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('/user', {
-        email,
-        password,
-      });
-      alert(response);
-      history.push('/login');
-    } catch (err) {
-      alert(err);
+    // try {
+    //   const response = await axios.post('/auth/login', {
+    //     email,
+    //     password,
+    //   });
+    //   alert(response);
+    //   history.push('/');
+    // } catch (err) {
+    //   alert(err);
+    // }
+    if (email === 'ammar') {
+      dispatch(login({ email, password }));
     }
+    history.push('/');
   };
 
   return (
@@ -55,6 +63,9 @@ const Login = () => {
       </Form>
       <div className="txt-register">
         Don't have an account? <Link to="/register">Register</Link>
+      </div>
+      <div className="txt-register">
+        <Link to="/forgotPass">Forgotten password?</Link>
       </div>
     </div>
   );

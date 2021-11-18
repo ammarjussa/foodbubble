@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, FormControl, Navbar } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
@@ -7,8 +7,28 @@ import iconLinkedIn from '../../assets/images/social-linkedin.png';
 import iconInstagram from '../../assets/images/social-instagram.png';
 import iconYoutube from '../../assets/images/social-youtube.png';
 import Separator from './Separator';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../actions';
+import { useHistory } from 'react-router-dom';
 
 const AppHeader = () => {
+  const state = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [login, setLogin] = useState(false);
+
+  const signOut = (e) => {
+    e.preventDefault();
+    dispatch(logout);
+    setLogin(false);
+    history.push('/login');
+  };
+
+  useEffect(() => {
+    if (state.isLoggedIn) setLogin(true);
+    else setLogin(false);
+  }, [state.isLoggedIn]);
+
   return (
     <>
       <Navbar className="justify-content-between">
@@ -40,7 +60,14 @@ const AppHeader = () => {
           <div class="nav-links">
             <Link to="/">Home</Link> | <Link to="/about">About </Link> |{' '}
             <Link to="/planner">Meal Planner</Link> | <Link to="/search">Search Recipes</Link> |{' '}
-            <Link to="/">Plan My Week</Link> | <Link to="/login">Login</Link>
+            <Link to="/">Plan My Week</Link> |{' '}
+            {login ? (
+              <span className="signout" onClick={signOut}>
+                Sign Out
+              </span>
+            ) : (
+              <Link to="/login">Login</Link>
+            )}
           </div>
 
           <Form className="header-search">

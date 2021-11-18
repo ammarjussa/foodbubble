@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AppHeader from './components/Layout/Header';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import ForgotPassword from './components/Auth/ForgotPassword';
 import NotFound from './components/Layout/NotFound';
 import Footer from './components/Layout/Footer';
 import About from './components/About/About';
@@ -63,6 +64,7 @@ function AppRoutes() {
         <Route path="/voice" component={VoiceSearch} />
         <Route path="/sync" component={SyncCalendar} />
         <Route path="/recipe" component={Recipe} />
+        <Route path="/forgotPass" component={ForgotPassword} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

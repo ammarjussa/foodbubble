@@ -76,3 +76,14 @@ footer {
   margin: 15px;
   border-bottom: 2px solid $border-color;
 }
+
+.signout {
+  color: $font-color;
+  font-weight: $font-weight-heavy;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

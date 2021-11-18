@@ -15,14 +15,23 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
+    const headers = {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    };
+
     try {
-      const response = await axios.post('/user', {
-        firstName,
-        lastName,
-        email,
-        password,
-      });
-      alert(response);
+      const response = await axios.post(
+        '/user/',
+        { headers: headers },
+        {
+          name: firstName + ' ' + lastName,
+          email,
+          password,
+        }
+      );
+
+      console.log(response);
       history.push('/login');
     } catch (err) {
       alert(err);
