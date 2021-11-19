@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import { Button, Form, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import axios from '../../axios';
 
 const ForgotPassword = () => {
   const history = useHistory();
 
-  const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
-  const onSubmit = () => {
-    history.push('/login');
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/auth/newPassword', {
+        newPassword,
+      });
+      if (response) {
+        alert('Password change successful');
+        history.push('/login');
+      }
+    } catch (err) {
+      alert('Error! Please try again');
+    }
   };
 
   return (
     <div className="login-component">
       <Form>
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Old Password</Form.Label>
-            <Form.Control
-              onChange={(e) => setOldPassword(e.target.value)}
-              value={oldPassword}
-              type="password"
-              placeholder="Enter old password"
-            />
-          </Form.Group>
-        </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>New Password</Form.Label>
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
           </Form.Group>
         </Form.Row>
         <Button type="submit" onClick={onSubmit}>
-          Change
+          Submit
         </Button>
       </Form>
     </div>

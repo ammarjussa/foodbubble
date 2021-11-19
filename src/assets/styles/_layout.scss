@@ -87,3 +87,11 @@ footer {
   }
 }
 
+.forgotpass {
+  color: $button-color-2;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

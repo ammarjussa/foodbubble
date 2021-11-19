@@ -9,32 +9,25 @@ const Register = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
 
   const history = useHistory();
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const headers = {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    };
-
     try {
-      const response = await axios.post(
-        '/user/',
-        { headers: headers },
-        {
-          name: firstName + ' ' + lastName,
-          email,
-          password,
-        }
-      );
+      const response = await axios.post('/user/', {
+        name: firstName + ' ' + lastName,
+        email,
+        phone,
+        password,
+      });
 
       console.log(response);
       history.push('/login');
     } catch (err) {
-      alert(err);
+      alert('The email or phone is already registered');
     }
   };
 
@@ -71,8 +64,6 @@ const Register = () => {
               placeholder="Enter email"
             />
           </Form.Group>
-        </Form.Row>
-        <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
@@ -80,6 +71,17 @@ const Register = () => {
               type="password"
               value={password}
               placeholder="Enter password"
+            />
+          </Form.Group>
+        </Form.Row>
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridPhone">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              onChange={(e) => setPhone(e.target.value)}
+              type="tel"
+              value={phone}
+              placeholder="Enter phone number"
             />
           </Form.Group>
         </Form.Row>
