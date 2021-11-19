@@ -21,14 +21,16 @@ const Login = () => {
         email,
         password,
       });
+      console.log(response);
       if (response.status === 200) {
         dispatch(login(response.data));
         localStorage.setItem('user', JSON.stringify(response.data));
-        if (response.data.user.status === 'REGISTERED') {
-          history.push({ pathname: '/activation', state: { id: response.data.user.uid } });
+        if (response.data.status === 'REGISTERED') {
+          history.push({ pathname: '/activation', state: { id: response.data.id } });
         } else history.push('/');
       }
     } catch (err) {
+      console.log(err);
       alert('Incorrect username or password');
     }
   };

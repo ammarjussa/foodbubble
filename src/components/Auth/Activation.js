@@ -19,8 +19,8 @@ const Activation = () => {
           activationCode: activation,
         });
         if (response.status === 200) {
-          alert('Password change successful');
-          history.push('/login');
+          alert('Activation Successful');
+          history.push('/');
         }
       } catch (err) {
         console.log(err);
