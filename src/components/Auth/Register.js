@@ -24,8 +24,10 @@ const Register = () => {
         password,
       });
 
-      console.log(response);
-      history.push('/login');
+      if (response.status === 200) {
+        alert('Registered Successfully');
+        history.push('/login');
+      }
     } catch (err) {
       alert('The email or phone is already registered');
     }

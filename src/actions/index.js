@@ -10,5 +10,6 @@ export const login = (user) => {
 export const logout = () => {
   return {
     type: SIGN_OUT_USER,
+		payload: null,
   };
 };

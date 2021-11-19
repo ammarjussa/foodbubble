@@ -7,14 +7,16 @@ const ForgotPassword = () => {
   const history = useHistory();
 
   const [newPassword, setNewPassword] = useState('');
+  const [requestCode, setRequestCode] = useState('');
 
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('/auth/newPassword', {
+        forgotPassToken: requestCode,
         newPassword,
       });
-      if (response) {
+      if (response.status === 200) {
         alert('Password change successful');
         history.push('/login');
       }
@@ -26,6 +28,17 @@ const ForgotPassword = () => {
   return (
     <div className="login-component">
       <Form>
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridCode">
+            <Form.Label>Request Code</Form.Label>
+            <Form.Control
+              type="password"
+              value={requestCode}
+              onChange={(e) => setRequestCode(e.target.value)}
+              placeholder="Enter request code"
+            />
+          </Form.Group>
+        </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>New Password</Form.Label>

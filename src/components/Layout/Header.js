@@ -10,6 +10,7 @@ import Separator from './Separator';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../actions';
 import { useHistory } from 'react-router-dom';
+import axios from '../../axios';
 
 const AppHeader = () => {
   const state = useSelector((state) => state.auth);
@@ -17,11 +18,20 @@ const AppHeader = () => {
   const history = useHistory();
   const [login, setLogin] = useState(false);
 
-  const signOut = (e) => {
+  const signOut = async (e) => {
     e.preventDefault();
-    dispatch(logout);
-    setLogin(false);
-    history.push('/login');
+    console.log(state);
+    try {
+      const response = await axios.get(`/auth/logout/${state.user.id}`);
+      if (response.status === 200) {
+        dispatch(logout());
+        localStorage.setItem('user', null);
+        history.push('/login');
+      }
+    } catch (err) {
+      console.log(err);
+      alert('An error occured');
+    }
   };
 
   useEffect(() => {

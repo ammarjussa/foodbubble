@@ -21,8 +21,13 @@ const Login = () => {
         email,
         password,
       });
-      dispatch(login({ response }));
-      history.push('/');
+      if (response.status === 200) {
+        dispatch(login(response.data));
+        localStorage.setItem('user', JSON.stringify(response.data));
+        history.push({
+          pathname: '/',
+        });
+      }
     } catch (err) {
       alert('Incorrect username or password');
     }
@@ -35,7 +40,8 @@ const Login = () => {
       const response = await axios.post('/auth/forgotPassword', {
         email: myEmail,
       });
-      if (response) {
+
+      if (response.status === 200) {
         history.push('/forgotpass');
       }
     } catch (err) {
