@@ -24,9 +24,9 @@ const Login = () => {
       if (response.status === 200) {
         dispatch(login(response.data));
         localStorage.setItem('user', JSON.stringify(response.data));
-        history.push({
-          pathname: '/',
-        });
+        if (response.data.user.status === 'REGISTERED') {
+          history.push({ pathname: '/activation', state: { id: response.data.user.uid } });
+        } else history.push('/');
       }
     } catch (err) {
       alert('Incorrect username or password');

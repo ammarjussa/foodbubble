@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AppHeader from './components/Layout/Header';
 import Login from './components/Auth/Login';
+import Activation from './components/Auth/Activation';
 import Register from './components/Auth/Register';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import NotFound from './components/Layout/NotFound';
@@ -41,6 +42,7 @@ function AppRoutes() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
+        <Route path="/activation" exact component={Activation} />
         <Route path="/register" exact component={Register} />
         <Route path="/about" exact component={About} />
         <Route path="/preference" exact component={ShopPreferences} />

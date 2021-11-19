@@ -19,31 +19,6 @@ const Home = function () {
     }
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   const activation = async () => {
-  //     if (state.user && state.user.status === 'REGISTERED') {
-  //       const activationCode = prompt(
-  //         'To activate your account, please enter the activation code sent in your email'
-  //       );
-
-  //       if (activationCode && activationCode.length >= 1) {
-  //         try {
-  //           const response = await axios.post('/auth/login', {
-  //             userId: state.user.id,
-  //             activationCode: activationCode,
-  //           });
-  //           if (response.status === 200) {
-  //             alert('Activation successful');
-  //           }
-  //         } catch (err) {
-  //           alert('Incorrect username or password');
-  //         }
-  //       }
-  //     }
-  //   };
-  //   activation();
-  // }, [state.user]);
-
   return (
     <div className="home-component">
       <img
