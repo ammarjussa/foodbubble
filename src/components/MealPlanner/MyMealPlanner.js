@@ -7,8 +7,8 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 const MyMealPlanner = () => {
   return (
-    <div>
-      <SearchHeader title=" My Meal Planner" />
+    <div className='meal-planner-screen'>
+      <SearchHeader title="My Meal Planner" />
       <div className="row p-5">
         <div className="col-md-2">
           <Sidebar />

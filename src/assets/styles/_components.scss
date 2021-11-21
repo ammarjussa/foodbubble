@@ -888,13 +888,69 @@
   }
 }
 
-.sidebar-row {
-  height: 60px;
-  background-color: #f1f1f1;
-  border: 1px solid gray;
-  cursor: pointer;
+.meal-planner-screen {
+  .meal-sidebar {
+    .sidebar-header {
+      height: 60px;
+      background-color: #269fca;
 
-  &:hover {
-    background-color: silver;
+      p {
+        font-size: 20px;
+        color: white;
+      }
+    }
+
+    .plan-text {
+      font-size: 15px;
+      padding-top: 10px;
+
+      input {
+        width: 40px;
+        border: 1px solid silver;
+        outline: none;
+      }
+    }
+    .sidebar-row {
+      height: 60px;
+      background-color: #f1f1f1;
+      border: 1px solid gray;
+      cursor: pointer;
+
+      &:hover {
+        background-color: silver;
+      }
+    }
+
+    .sidebar-link {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .item {
+    width: 210px;
+    height: 150px;
+    border: 1px solid silver;
+    background-color: white;
+
+    .number {
+      width: 50px;
+      background-color: silver;
+      color: white;
+    }
+
+    .plus {
+      width: 35px;
+      height: 35px;
+      color: silver;
+      cursor: pointer;
+    }
+  }
+
+  .column-bar {
+    height: 30px;
+    width: 210px;
+    background-color: whitesmoke;
   }
 }
