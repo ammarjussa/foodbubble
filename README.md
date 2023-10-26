@@ -7,7 +7,7 @@ Food Bubble is a recipe application that allows users to track and maintain thei
 1. **Create Your Meal**
     - Description: This screen allows users to input ingredients, and it generates a meal suggestion based on the provided ingredients.
     - Technologies used: [List technologies used for this screen, e.g., React, HTML, CSS]
-    - [Link to relevant code file(s)](path/to/code)
+    - [Link to relevant code file(s)](src/components/CustomRecipe/MyCustomRecipes.js)
 
 2. **Search Recipes based on Filter**
     - Description: Users can search for recipes using various filters like cuisine type, dietary restrictions, cooking time, etc.
