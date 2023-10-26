@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Food Bubble - Recipe App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Food Bubble is a recipe application that allows users to track and maintain their diets while also providing a feature to generate recipes. This repository contains the frontend code for the application.
 
-## Available Scripts
+## Screens Developed
 
-In the project directory, you can run:
+1. **Create Your Meal**
+    - Description: This screen allows users to input ingredients, and it generates a meal suggestion based on the provided ingredients.
+    - Technologies used: [List technologies used for this screen, e.g., React, HTML, CSS]
+    - [Link to relevant code file(s)](path/to/code)
 
-### `yarn start`
+2. **Search Recipes based on Filter**
+    - Description: Users can search for recipes using various filters like cuisine type, dietary restrictions, cooking time, etc.
+    - Technologies used: [List technologies used for this screen, e.g., React, HTML, CSS]
+    - [Link to relevant code file(s)](path/to/code)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. **Weekly Meal Planner**
+    - Description: This screen provides a feature for users to plan their meals for an entire week, including breakfast, lunch, and dinner.
+    - Technologies used: [List technologies used for this screen, e.g., React, HTML, CSS]
+    - [Link to relevant code file(s)](path/to/code)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. **Create Recipes**
+    - Description: Allows users to create and save their own recipes with detailed instructions and ingredient lists.
+    - Technologies used: [List technologies used for this screen, e.g., React, HTML, CSS]
+    - [Link to relevant code file(s)](path/to/code)
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a copy of the project up and running on your local machine, follow these steps:
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/food-bubble.git
+2. Install the necessary dependencies
+   ```bash
+   yarn
+3. Start the development server
+   ```bash
+   yarn start    
